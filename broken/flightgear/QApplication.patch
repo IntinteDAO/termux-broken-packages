@@ -1,0 +1,24 @@
+diff -ur orig/3rdparty/joystick/jsNone.cxx mod/3rdparty/joystick/jsNone.cxx
+--- orig/3rdparty/joystick/jsNone.cxx	2023-03-07 08:21:46.000000000 +0100
++++ mod/3rdparty/joystick/jsNone.cxx	2023-03-10 21:37:04.775420375 +0100
+@@ -22,6 +22,9 @@
+ 
+ #include "FlightGear_js.h"
+ 
++#define TRUE 1
++#define FALSE 0
++
+ #ifdef __OpenBSD__
+   #define TRUE JS_TRUE
+ #endif
+diff -ur orig/src/GUI/LauncherMainWindow.cxx mod/src/GUI/LauncherMainWindow.cxx
+--- orig/src/GUI/LauncherMainWindow.cxx	2023-03-07 08:21:46.000000000 +0100
++++ mod/src/GUI/LauncherMainWindow.cxx	2023-03-10 21:45:56.335381879 +0100
+@@ -8,6 +8,7 @@
+ #include <QDebug>
+ #include <QMenu>
+ #include <QMenuBar>
++#include <QApplication>
+ 
+ #include <QOpenGLContext>
+ #include <QQmlComponent>

@@ -1,0 +1,12 @@
+diff -ur plib2/configure plib/configure
+--- plib2/configure	2008-03-11 03:10:29.000000000 +0100
++++ plib/configure	2023-03-10 20:31:52.075748747 +0100
+@@ -5226,6 +5226,8 @@
+ /usr/X11R5/include
+ /usr/X11R4/include
+ 
++/data/data/com.termux/files/usr/include/X11
++
+ /usr/include/X11
+ /usr/include/X11R6
+ /usr/include/X11R5

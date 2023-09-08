@@ -1,0 +1,120 @@
+From: Alberto Luaces <aluaces@udc.es>
+Date: Thu, 3 Oct 2019 13:50:39 +0200
+Subject: Spelling fixes.
+
+---
+ examples/osgspheresegment/osgspheresegment.cpp                |  2 +-
+ examples/osgtexturecompression/osgtexturecompression.cpp      |  2 +-
+ src/osgPlugins/shp/ESRIShapeReaderWriter.cpp                  |  2 +-
+ src/osgPlugins/trk/ReaderWriterTRK.cpp                        |  2 +-
+ src/osgUtil/IntersectVisitor.cpp                              |  2 +-
+ src/osgVolume/Shaders/volume_multipass_cube_and_hull_frag.cpp | 10 +++++-----
+ 6 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/examples/osgspheresegment/osgspheresegment.cpp b/examples/osgspheresegment/osgspheresegment.cpp
+index e6d3770..851f22f 100644
+--- a/examples/osgspheresegment/osgspheresegment.cpp
++++ b/examples/osgspheresegment/osgspheresegment.cpp
+@@ -114,7 +114,7 @@ class IntersectionUpdateCallback : public osg::NodeCallback
+                 {
+                     if (intersectionGroup_.valid())
+                     {
+-                        // now we need to place the intersections which are in the SphereSegmenet's coordinate frame into
++                        // now we need to place the intersections which are in the SphereSegment's coordinate frame into
+                         // to the final position.
+                         osg::MatrixTransform* mt = new osg::MatrixTransform;
+                         mt->setMatrix(osg::computeLocalToWorld(nv->getNodePath()));
+diff --git a/examples/osgtexturecompression/osgtexturecompression.cpp b/examples/osgtexturecompression/osgtexturecompression.cpp
+index 7a28476..b830bec 100644
+--- a/examples/osgtexturecompression/osgtexturecompression.cpp
++++ b/examples/osgtexturecompression/osgtexturecompression.cpp
+@@ -124,7 +124,7 @@ int main(int argc, char** argv)
+ 
+     if (arguments.argc()<=1)
+     {
+-        std::cout<<"Please supply an image filename on the commnand line."<<std::endl;
++        std::cout<<"Please supply an image filename on the command line."<<std::endl;
+         return 1;
+     }
+ 
+diff --git a/src/osgPlugins/shp/ESRIShapeReaderWriter.cpp b/src/osgPlugins/shp/ESRIShapeReaderWriter.cpp
+index abe9de0..4891a50 100644
+--- a/src/osgPlugins/shp/ESRIShapeReaderWriter.cpp
++++ b/src/osgPlugins/shp/ESRIShapeReaderWriter.cpp
+@@ -66,7 +66,7 @@ class ESRIShapeReaderWriter : public osgDB::ReaderWriter
+             {
+                 if (sp.getGeode()->getNumDrawables() != xbp.getAttributeList().size())
+                 {
+-                    OSG_WARN << "ESRIShape loader : .dbf file containe different record number that .shp file." << std::endl
++                    OSG_WARN << "ESRIShape loader : .dbf file contained different record number that .shp file." << std::endl
+                                            << "                   .dbf record skipped." << std::endl;
+                 }
+                 else
+diff --git a/src/osgPlugins/trk/ReaderWriterTRK.cpp b/src/osgPlugins/trk/ReaderWriterTRK.cpp
+index 729afd5..0150eb2 100644
+--- a/src/osgPlugins/trk/ReaderWriterTRK.cpp
++++ b/src/osgPlugins/trk/ReaderWriterTRK.cpp
+@@ -311,7 +311,7 @@ class ReaderWriterTRK : public osgDB::ReaderWriter
+                         vertices->push_back(osg::Vec3(vptr[0],vptr[1],vptr[2]));
+                     }
+ 
+-                    // add the line segmenets for track
++                    // add the line segments for track
+                     for(int pi=0; pi<n_points-1; ++pi, ++vi)
+                     {
+                         lines->push_back(vi);
+diff --git a/src/osgUtil/IntersectVisitor.cpp b/src/osgUtil/IntersectVisitor.cpp
+index 0f05b5f..c15cc71 100644
+--- a/src/osgUtil/IntersectVisitor.cpp
++++ b/src/osgUtil/IntersectVisitor.cpp
+@@ -275,7 +275,7 @@ void IntersectVisitor::addLineSegment(LineSegment* seg)
+ 
+     if (cis->_segList.size()>=32)
+     {
+-        OSG_WARN<<"Warning: excessive number of line segmenets passed to IntersectVisitor::addLineSegment(..), maximum permitted is 32 line segments."<<std::endl;
++        OSG_WARN<<"Warning: excessive number of line segments passed to IntersectVisitor::addLineSegment(..), maximum permitted is 32 line segments."<<std::endl;
+         OSG_WARN<<"         "<<seg->start()<<" "<<seg->end()<<" segment ignored.."<< std::endl;
+         return;
+     }
+diff --git a/src/osgVolume/Shaders/volume_multipass_cube_and_hull_frag.cpp b/src/osgVolume/Shaders/volume_multipass_cube_and_hull_frag.cpp
+index e9882dc..43826c7 100644
+--- a/src/osgVolume/Shaders/volume_multipass_cube_and_hull_frag.cpp
++++ b/src/osgVolume/Shaders/volume_multipass_cube_and_hull_frag.cpp
+@@ -23,7 +23,7 @@ char volume_multipass_cube_and_hull_frag[] = "#version 110\n"
+                                              "        fragColor  = mix(scene_color, fragColor, fragColor.a);\n"
+                                              "        if (fragColor.a>=1.0) return fragColor;\n"
+                                              "\n"
+-                                             "        // compute rear segement color and blend with accumulated_color\n"
++                                             "        // compute rear segment color and blend with accumulated_color\n"
+                                              "        return mix( fragColor, computeRayColor(fragColor, px, py, depth_start, scene_depth), transparencyFactor);\n"
+                                              "    }\n"
+                                              "    else\n"
+@@ -39,7 +39,7 @@ char volume_multipass_cube_and_hull_frag[] = "#version 110\n"
+                                              "        fragColor  = mix(scene_color, fragColor, fragColor.a);\n"
+                                              "        if (fragColor.a>=1.0) return fragColor;\n"
+                                              "\n"
+-                                             "        // compute rear segement color and blend with accumulated_color\n"
++                                             "        // compute rear segment color and blend with accumulated_color\n"
+                                              "        return computeRayColor(fragColor, px, py, depth_start, scene_depth) * transparencyFactor;\n"
+                                              "    }\n"
+                                              "    else\n"
+@@ -78,7 +78,7 @@ char volume_multipass_cube_and_hull_frag[] = "#version 110\n"
+                                              "\n"
+                                              "    if (back_depth<gl_FragCoord.z)\n"
+                                              "    {\n"
+-                                             "        // segment front_depth to 0.0, exterior transparancy\n"
++                                             "        // segment front_depth to 0.0, exterior transparency\n"
+                                              "        // segment back_depth to front_depth, interior transparency\n"
+                                              "        // segment gl_FragCoord.z to back_depth, exterior transparency\n"
+                                              "        fragColor = computeSegment(fragColor, gl_FragCoord.x, gl_FragCoord.y, front_depth, 0.0, ExteriorTransparencyFactorValue, color, texture_depth);\n"
+@@ -93,8 +93,8 @@ char volume_multipass_cube_and_hull_frag[] = "#version 110\n"
+                                              "    }\n"
+                                              "    else if (front_depth<gl_FragCoord.z)\n"
+                                              "    {\n"
+-                                             "        // segment front_depth to 0, exterior transparancy\n"
+-                                             "        // segement gl_FragCoord.z to front_depth, interior transparancy\n"
++                                             "        // segment front_depth to 0, exterior transparency\n"
++                                             "        // segment gl_FragCoord.z to front_depth, interior transparency\n"
+                                              "        // back_depth behind gl_FragCoord.z so clipped out by cube and not required.\n"
+                                              "        fragColor = computeSegment(fragColor, gl_FragCoord.x, gl_FragCoord.y, front_depth, 0.0, ExteriorTransparencyFactorValue, color, texture_depth);\n"
+                                              "        if (fragColor.a<1.0)\n"

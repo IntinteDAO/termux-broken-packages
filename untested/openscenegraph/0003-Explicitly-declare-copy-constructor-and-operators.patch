@@ -1,0 +1,281 @@
+From: Alberto Luaces <aluaces@udc.es>
+Date: Thu, 7 Nov 2019 18:13:59 +0100
+Subject: Explicitly declare copy constructor and operators.
+
+---
+ examples/osgphotoalbum/ImageReaderWriter.cpp | 15 +++++++++++++++
+ examples/osgphotoalbum/ImageReaderWriter.h   |  1 +
+ include/osg/BoundingSphere                   |  6 ++++++
+ include/osg/GLExtensions                     |  9 +++++++++
+ include/osg/Quat                             |  2 ++
+ src/osgDB/DatabasePager.cpp                  |  4 ++--
+ src/osgDB/Registry.cpp                       |  4 ++--
+ src/osgPlugins/OpenFlight/Vertex.cpp         | 18 ++++++++++++++++++
+ src/osgPlugins/OpenFlight/Vertex.h           |  2 ++
+ src/osgPlugins/cfg/RenderSurface.h           | 10 ++++++++++
+ src/osgPlugins/gles/glesUtil                 |  4 ++--
+ src/osgSim/SphereSegment.cpp                 |  6 +++---
+ src/osgViewer/PixelBufferWin32.cpp           |  2 +-
+ 13 files changed, 73 insertions(+), 10 deletions(-)
+
+diff --git a/examples/osgphotoalbum/ImageReaderWriter.cpp b/examples/osgphotoalbum/ImageReaderWriter.cpp
+index 83e72a6..fceb457 100644
+--- a/examples/osgphotoalbum/ImageReaderWriter.cpp
++++ b/examples/osgphotoalbum/ImageReaderWriter.cpp
+@@ -60,6 +60,21 @@ ImageReaderWriter::DataReference::DataReference(const DataReference& rhs):
+     _backPage(rhs._backPage) {}
+ 
+ 
++ImageReaderWriter::DataReference &ImageReaderWriter::DataReference::operator= (const ImageReaderWriter::DataReference& rhs)
++{
++    _fileName = rhs._fileName;
++    _resolutionX = rhs._resolutionX;
++    _resolutionY = rhs._resolutionY;
++    _center = rhs._center;
++    _maximumWidth = rhs._maximumWidth;
++    _maximumHeight = rhs._maximumHeight;
++    _numPointsAcross = rhs._numPointsAcross;
++    _numPointsUp = rhs._numPointsUp;
++    _backPage = rhs._backPage;
++
++    return *this;
++}
++
+ 
+ ImageReaderWriter::ImageReaderWriter()
+ {
+diff --git a/examples/osgphotoalbum/ImageReaderWriter.h b/examples/osgphotoalbum/ImageReaderWriter.h
+index 1e20736..224a7a9 100644
+--- a/examples/osgphotoalbum/ImageReaderWriter.h
++++ b/examples/osgphotoalbum/ImageReaderWriter.h
+@@ -68,6 +68,7 @@ class ImageReaderWriter : public osgDB::ReaderWriter
+             DataReference();
+             DataReference(const std::string& fileName, unsigned int res, float width, float height,bool backPage);
+             DataReference(const DataReference& rhs);
++            DataReference &operator= (const DataReference& rhs);
+ 
+             std::string     _fileName;
+             unsigned int    _resolutionX;
+diff --git a/include/osg/BoundingSphere b/include/osg/BoundingSphere
+index 4502e45..ede12d9 100644
+--- a/include/osg/BoundingSphere
++++ b/include/osg/BoundingSphere
+@@ -52,6 +52,12 @@ class BoundingSphereImpl
+         /** Creates a bounding sphere initialized to the given extents. */
+         BoundingSphereImpl(const BoundingBoxImpl<VT>& bb) : _center(0.0,0.0,0.0),_radius(-1.0) { expandBy(bb); }
+ 
++        BoundingSphereImpl& operator= (const BoundingSphereImpl &o){
++            _center = o._center;
++            _radius = o._radius;
++            return *this;
++        }
++
+         /** Clear the bounding sphere. Reset to default values. */
+         inline void init()
+         {
+diff --git a/include/osg/GLExtensions b/include/osg/GLExtensions
+index aa868e9..59ad09b 100644
+--- a/include/osg/GLExtensions
++++ b/include/osg/GLExtensions
+@@ -149,6 +149,15 @@ class VertexAttribAlias
+             _osgName(osgName),
+             _declaration(declaration) {}
+ 
++        VertexAttribAlias &operator = (const VertexAttribAlias &o) {
++            _location = o._location;
++            _glName = o._glName;
++            _osgName = o._osgName;
++            _declaration = o._declaration;
++
++            return *this;
++        }
++
+         GLuint      _location;
+         std::string _glName;
+         std::string _osgName;
+diff --git a/include/osg/Quat b/include/osg/Quat
+index 863a029..ff9b572 100644
+--- a/include/osg/Quat
++++ b/include/osg/Quat
+@@ -92,6 +92,8 @@ class OSG_EXPORT Quat
+             makeRotate(angle1,axis1,angle2,axis2,angle3,axis3);
+         }
+ 
++        Quat(const Quat& q) { _v[0]=q._v[0];  _v[1]=q._v[1]; _v[2]=q._v[2]; _v[3]=q._v[3]; }
++
+         inline Quat& operator = (const Quat& v) { _v[0]=v._v[0];  _v[1]=v._v[1]; _v[2]=v._v[2]; _v[3]=v._v[3]; return *this; }
+ 
+         inline bool operator == (const Quat& v) const { return _v[0]==v._v[0] && _v[1]==v._v[1] && _v[2]==v._v[2] && _v[3]==v._v[3]; }
+diff --git a/src/osgDB/DatabasePager.cpp b/src/osgDB/DatabasePager.cpp
+index dc1ebbb..f3ba578 100644
+--- a/src/osgDB/DatabasePager.cpp
++++ b/src/osgDB/DatabasePager.cpp
+@@ -340,7 +340,7 @@ public:
+ 
+ protected:
+ 
+-    FindCompileableGLObjectsVisitor& operator = (const FindCompileableGLObjectsVisitor&) { return *this; }
++    FindCompileableGLObjectsVisitor& operator = (const FindCompileableGLObjectsVisitor&) = delete;
+ };
+ 
+ 
+@@ -1832,7 +1832,7 @@ public:
+ 
+ protected:
+ 
+-    FindPagedLODsVisitor& operator = (const FindPagedLODsVisitor&) { return *this; }
++    FindPagedLODsVisitor& operator = (const FindPagedLODsVisitor&) = delete;
+ };
+ 
+ 
+diff --git a/src/osgDB/Registry.cpp b/src/osgDB/Registry.cpp
+index 2262e9d..b3d1454 100644
+--- a/src/osgDB/Registry.cpp
++++ b/src/osgDB/Registry.cpp
+@@ -89,7 +89,7 @@ public:
+ 
+ protected:
+ 
+-    AvailableReaderWriterIterator& operator = (const AvailableReaderWriterIterator&) { return *this; }
++    AvailableReaderWriterIterator& operator = (const AvailableReaderWriterIterator&) = delete;
+ 
+     Registry::ReaderWriterList&     _rwList;
+     OpenThreads::ReentrantMutex&    _pluginMutex;
+@@ -133,7 +133,7 @@ public:
+ 
+ protected:
+ 
+-    AvailableArchiveIterator& operator = (const AvailableArchiveIterator&) { return *this; }
++    AvailableArchiveIterator& operator = (const AvailableArchiveIterator&) = delete;
+ 
+     Registry::ArchiveCache&         _archives;
+     OpenThreads::ReentrantMutex&    _mutex;
+diff --git a/src/osgPlugins/OpenFlight/Vertex.cpp b/src/osgPlugins/OpenFlight/Vertex.cpp
+index 49c63bd..9d3d280 100644
+--- a/src/osgPlugins/OpenFlight/Vertex.cpp
++++ b/src/osgPlugins/OpenFlight/Vertex.cpp
+@@ -46,6 +46,24 @@ Vertex::Vertex(const Vertex& vertex):
+     }
+ }
+ 
++Vertex & Vertex::operator= (const Vertex &vertex)
++{
++    _coord = vertex._coord;
++    _color = vertex._color;
++    _normal = vertex._normal;
++    _validColor = vertex._validColor;
++    _validNormal = vertex._validNormal;
++
++    for (int layer=0; layer<MAX_LAYERS; layer++)
++    {
++        _uv[layer] = vertex._uv[layer];
++        _validUV[layer] = vertex._validUV[layer];
++    }
++
++    return *this;
++}
++
++
+ void Vertex::setCoord(const osg::Vec3& coord)
+ {
+     _coord = coord;
+diff --git a/src/osgPlugins/OpenFlight/Vertex.h b/src/osgPlugins/OpenFlight/Vertex.h
+index 280ada4..ad713c8 100644
+--- a/src/osgPlugins/OpenFlight/Vertex.h
++++ b/src/osgPlugins/OpenFlight/Vertex.h
+@@ -35,6 +35,8 @@ public:
+     Vertex();
+     Vertex(const Vertex& vertex);
+ 
++    Vertex &operator= (const Vertex &vertex);
++
+     void setCoord(const osg::Vec3& coord);
+     void setColor(const osg::Vec4& color);
+     void setNormal(const osg::Vec3& normal);
+diff --git a/src/osgPlugins/cfg/RenderSurface.h b/src/osgPlugins/cfg/RenderSurface.h
+index a6df65d..28652a1 100644
+--- a/src/osgPlugins/cfg/RenderSurface.h
++++ b/src/osgPlugins/cfg/RenderSurface.h
+@@ -73,6 +73,16 @@ class RenderSurface : public osg::Referenced
+                      _width = ir._width;
+                      _height = ir._height;
+                 }
++
++                InputRectangle &operator = (const InputRectangle &ir)
++                {
++                    _left = ir._left;
++                    _bottom = ir._bottom;
++                    _width = ir._width;
++                    _height = ir._height;
++                    return *this;
++                }
++
+                 virtual ~InputRectangle() {}
+ 
+                 void set( float left, float right, float bottom, float top )
+diff --git a/src/osgPlugins/gles/glesUtil b/src/osgPlugins/gles/glesUtil
+index 88f3817..fb2b48a 100644
+--- a/src/osgPlugins/gles/glesUtil
++++ b/src/osgPlugins/gles/glesUtil
+@@ -224,7 +224,7 @@ namespace glesUtil {
+         virtual void apply(osg::MatrixfArray& array) { remap(array); }
+ 
+     protected:
+-        RemapArray& operator= (const RemapArray&) { return *this; }
++        RemapArray& operator= (const RemapArray&) = delete;
+     };
+ 
+ 
+@@ -254,7 +254,7 @@ namespace glesUtil {
+         }
+ 
+         protected:
+-            VertexAttribComparitor& operator= (const VertexAttribComparitor&) { return *this; }
++            VertexAttribComparitor& operator= (const VertexAttribComparitor&) = delete;
+     };
+ 
+     // Move the values in an array to new positions, based on the
+diff --git a/src/osgSim/SphereSegment.cpp b/src/osgSim/SphereSegment.cpp
+index ace87c2..08423fc 100644
+--- a/src/osgSim/SphereSegment.cpp
++++ b/src/osgSim/SphereSegment.cpp
+@@ -1945,7 +1945,7 @@ namespace SphereSegmentIntersector
+ 
+     protected:
+ 
+-        AzimPlaneIntersector& operator = (const AzimPlaneIntersector&) { return *this; }
++        AzimPlaneIntersector& operator = (const AzimPlaneIntersector&) = delete;
+     };
+ 
+     struct ElevationIntersector
+@@ -2086,7 +2086,7 @@ namespace SphereSegmentIntersector
+ 
+     protected:
+ 
+-        ElevationIntersector& operator = (const ElevationIntersector&) { return *this; }
++        ElevationIntersector& operator = (const ElevationIntersector&) = delete;
+ 
+     };
+ 
+@@ -2216,7 +2216,7 @@ namespace SphereSegmentIntersector
+ 
+     protected:
+ 
+-        RadiusIntersector& operator = (const RadiusIntersector&) { return *this; }
++        RadiusIntersector& operator = (const RadiusIntersector&) = delete;
+ 
+     };
+ }
+diff --git a/src/osgViewer/PixelBufferWin32.cpp b/src/osgViewer/PixelBufferWin32.cpp
+index 567ae33..a9f19ce 100644
+--- a/src/osgViewer/PixelBufferWin32.cpp
++++ b/src/osgViewer/PixelBufferWin32.cpp
+@@ -212,7 +212,7 @@ protected:
+         _context(0),
+         _instance(0) {}
+ 
+-    TemporaryWindow &operator=(const TemporaryWindow &) { return *this; }
++    TemporaryWindow &operator=(const TemporaryWindow &) = delete;
+ 
+     void create();
+     void kill();

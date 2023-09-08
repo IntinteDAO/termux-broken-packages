@@ -1,0 +1,1638 @@
+From: Alberto Luaces <aluaces@udc.es>
+Date: Thu, 29 Oct 2020 16:01:23 +0100
+Subject: More spelling fixes.
+
+---
+ applications/present3D/Cluster.cpp                       |  2 +-
+ applications/present3D/present3D.cpp                     |  6 +++---
+ examples/osgautocapture/osgautocapture.cpp               |  2 +-
+ examples/osgcallback/osgcallback.cpp                     |  2 +-
+ examples/osgcopy/osgcopy.cpp                             |  2 +-
+ examples/osgframerenderer/osgframerenderer.cpp           |  2 +-
+ examples/osggeometry/osggeometry.cpp                     |  2 +-
+ examples/osgkeyboard/osgkeyboard.cpp                     |  2 +-
+ examples/osgkeyboardmouse/osgkeyboardmouse.cpp           |  4 ++--
+ examples/osgparticleshader/osgparticleshader.cpp         |  2 +-
+ examples/osgposter/osgposter.cpp                         |  2 +-
+ examples/osgreflect/osgreflect.cpp                       |  2 +-
+ examples/osgscreencapture/osgscreencapture.cpp           |  8 ++++----
+ examples/osgsequence/osgsequence.cpp                     |  6 +++---
+ examples/osgshadercomposition/oldshadercomposition.cpp   |  4 ++--
+ examples/osgshaderterrain/osgshaderterrain.cpp           |  2 +-
+ examples/osgtessellate/osgtessellate.cpp                 |  2 +-
+ .../osgtessellationshaders/osgtessellationshaders.cpp    |  6 +++---
+ examples/osgtext/osgtext.cpp                             |  4 ++--
+ examples/osgtexture2D/osgtexture2D.cpp                   |  2 +-
+ examples/osgunittests/osgunittests.cpp                   |  2 +-
+ src/OpenThreads/pthreads/PThread.cpp                     |  2 +-
+ src/OpenThreads/pthreads/PThreadCondition.cpp            |  2 +-
+ src/OpenThreads/win32/Win32Thread.cpp                    |  2 +-
+ src/osg/ApplicationUsage.cpp                             |  6 +++---
+ src/osg/BufferObject.cpp                                 |  2 +-
+ src/osg/DisplaySettings.cpp                              | 10 +++++-----
+ src/osg/Group.cpp                                        |  2 +-
+ src/osg/Image.cpp                                        |  2 +-
+ src/osg/PrimitiveSetIndirect.cpp                         |  2 +-
+ src/osg/Shader.cpp                                       |  2 +-
+ src/osg/ShaderComposer.cpp                               |  2 +-
+ src/osg/State.cpp                                        |  6 +++---
+ src/osg/Texture.cpp                                      |  2 +-
+ src/osg/Texture1D.cpp                                    |  2 +-
+ src/osg/Texture2D.cpp                                    |  4 ++--
+ src/osg/Texture3D.cpp                                    |  2 +-
+ src/osg/TextureCubeMap.cpp                               |  2 +-
+ src/osgDB/FileUtils.cpp                                  |  8 ++++----
+ src/osgDB/OutputStream.cpp                               |  4 ++--
+ src/osgDB/Registry.cpp                                   |  2 +-
+ src/osgPlugins/3ds/WriterCompareTriangle.cpp             |  8 ++++----
+ src/osgPlugins/OpenCASCADE/ReaderWriterOpenCASCADE.cpp   |  4 ++--
+ src/osgPlugins/OpenFlight/ExportOptions.cpp              |  2 +-
+ src/osgPlugins/QTKit/ReaderWriterQTKit.cpp               |  2 +-
+ .../RestHttpDevice/ReaderWriterRestHttpDevice.cpp        |  2 +-
+ src/osgPlugins/ac/Geode.cpp                              |  4 ++--
+ src/osgPlugins/ac/ac3d.cpp                               |  2 +-
+ src/osgPlugins/avfoundation/ReaderWriterAVFoundation.cpp |  2 +-
+ src/osgPlugins/dae/daeRGeometry.cpp                      |  2 +-
+ src/osgPlugins/dae/daeRMaterials.cpp                     |  4 ++--
+ src/osgPlugins/dae/daeWMaterials.cpp                     |  2 +-
+ src/osgPlugins/dicom/ReaderWriterDICOM.cpp               |  2 +-
+ src/osgPlugins/directshow/DirectShowTexture.cpp          |  4 ++--
+ src/osgPlugins/dxf/ReaderWriterDXF.cpp                   |  4 ++--
+ src/osgPlugins/gles/AnimationCleanerVisitor.cpp          |  2 +-
+ src/osgPlugins/gles/TangentSpaceVisitor.cpp              |  2 +-
+ src/osgPlugins/hdr/hdrwriter.cpp                         |  2 +-
+ src/osgPlugins/ive/VolumeTransferFunctionProperty.cpp    |  2 +-
+ src/osgPlugins/jpeg/EXIF_Orientation.cpp                 |  2 +-
+ src/osgPlugins/las/ReaderWriterLAS.cpp                   |  2 +-
+ src/osgPlugins/obj/ReaderWriterOBJ.cpp                   |  2 +-
+ src/osgPlugins/osga/OSGA_Archive.cpp                     |  2 +-
+ src/osgPlugins/ply/vertexData.cpp                        |  2 +-
+ src/osgPlugins/rot/ReaderWriterROT.cpp                   |  2 +-
+ src/osgPlugins/shadow/ReaderWriterOsgShadow.cpp          |  2 +-
+ src/osgPlugins/trans/ReaderWriterTRANS.cpp               |  2 +-
+ src/osgPlugins/txf/TXFFont.cpp                           |  6 +++---
+ src/osgPlugins/txp/TXPPagedLOD.cpp                       |  2 +-
+ src/osgPlugins/txp/TileMapper.cpp                        |  2 +-
+ src/osgShadow/ConvexPolyhedron.cpp                       |  6 +++---
+ src/osgShadow/LightSpacePerspectiveShadowMap.cpp         |  4 ++--
+ src/osgShadow/ViewDependentShadowMap.cpp                 |  2 +-
+ src/osgSim/LightPointNode.cpp                            |  4 ++--
+ src/osgSim/SphereSegment.cpp                             |  8 ++++----
+ src/osgUI/Widget.cpp                                     |  2 +-
+ src/osgUtil/IncrementalCompileOperation.cpp              |  2 +-
+ src/osgUtil/RenderBin.cpp                                |  6 +++---
+ src/osgUtil/ShaderGen.cpp                                |  2 +-
+ src/osgUtil/Simplifier.cpp                               |  4 ++--
+ src/osgViewer/View.cpp                                   | 16 ++++++++--------
+ src/osgViewer/Viewer.cpp                                 |  2 +-
+ src/osgVolume/FixedFunctionTechnique.cpp                 |  2 +-
+ src/osgVolume/MultipassTechnique.cpp                     |  8 ++++----
+ src/osgVolume/RayTracedTechnique.cpp                     |  2 +-
+ .../serializers/osgGA/KeySwitchMatrixManipulator.cpp     |  2 +-
+ 86 files changed, 141 insertions(+), 141 deletions(-)
+
+diff --git a/applications/present3D/Cluster.cpp b/applications/present3D/Cluster.cpp
+index 86785b1..0fe5d5f 100644
+--- a/applications/present3D/Cluster.cpp
++++ b/applications/present3D/Cluster.cpp
+@@ -305,7 +305,7 @@ bool Receiver::init( void )
+ 
+     if (result)
+     {
+-        OSG_NOTICE<<"Warning: Reciever::init() setsockopt(..) failed, errno="<<errno<<std::endl;
++        OSG_NOTICE<<"Warning: Receiver::init() setsockopt(..) failed, errno="<<errno<<std::endl;
+         return false;
+     }
+ 
+diff --git a/applications/present3D/present3D.cpp b/applications/present3D/present3D.cpp
+index ca2c584..279d70d 100644
+--- a/applications/present3D/present3D.cpp
++++ b/applications/present3D/present3D.cpp
+@@ -508,7 +508,7 @@ int main( int argc, char **argv )
+ 
+     viewer.addEventHandler( new osgViewer::WindowSizeHandler() );
+ 
+-    // neeed to address.
++    // need to address.
+     // viewer.getScene()->getUpdateVisitor()->setTraversalMode(osg::NodeVisitor::TRAVERSE_ACTIVE_CHILDREN);
+ 
+ 
+@@ -558,7 +558,7 @@ int main( int argc, char **argv )
+     while (arguments.read("--loop")) loopPresentation = true;
+ 
+     {
+-        // set update hte default traversal mode settings for update visitor
++        // set update the default traversal mode settings for update visitor
+         // default to osg::NodeVisitor::TRAVERSE_ACTIVE_CHILDREN.
+         osg::NodeVisitor::TraversalMode updateTraversalMode = osg::NodeVisitor::TRAVERSE_ACTIVE_CHILDREN; // viewer.getUpdateVisitor()->getTraversalMode();
+ 
+@@ -690,7 +690,7 @@ int main( int argc, char **argv )
+     // any option left unread are converted into errors to write out later.
+     //arguments.reportRemainingOptionsAsUnrecognized();
+ 
+-    // report any errors if they have ocured when parsing the program aguments.
++    // report any errors if they have ocured when parsing the program arguments.
+     if (arguments.errors())
+     {
+         arguments.writeErrorMessages(osg::notify(osg::INFO));
+diff --git a/examples/osgautocapture/osgautocapture.cpp b/examples/osgautocapture/osgautocapture.cpp
+index 9385703..9add26d 100644
+--- a/examples/osgautocapture/osgautocapture.cpp
++++ b/examples/osgautocapture/osgautocapture.cpp
+@@ -312,7 +312,7 @@ int main( int argc, char **argv )
+         osg::CoordinateSystemNode* csn = findTopMostNodeOfType<osg::CoordinateSystemNode>(loadedModel.get());
+         if(!csn) return 1;
+ 
+-        // Compute eye point in world coordiantes
++        // Compute eye point in world coordinates
+         osg::Vec3d eye;
+         csn->getEllipsoidModel()->convertLatLongHeightToXYZ(lat, lon, alt, eye.x(), eye.y(), eye.z());
+ 
+diff --git a/examples/osgcallback/osgcallback.cpp b/examples/osgcallback/osgcallback.cpp
+index 661b8e0..0d5ab8e 100644
+--- a/examples/osgcallback/osgcallback.cpp
++++ b/examples/osgcallback/osgcallback.cpp
+@@ -184,7 +184,7 @@ int main( int argc, char **argv )
+     // use an ArgumentParser object to manage the program arguments.
+     osg::ArgumentParser arguments(&argc,argv);
+ 
+-    // set the osgDB::Registy read file callback to catch all requests for reading files.
++    // set the osgDB::Registry read file callback to catch all requests for reading files.
+     osgDB::Registry::instance()->setReadFileCallback(new MyReadFileCallback());
+ 
+     // initialize the viewer.
+diff --git a/examples/osgcopy/osgcopy.cpp b/examples/osgcopy/osgcopy.cpp
+index 6e9087c..ef60b33 100644
+--- a/examples/osgcopy/osgcopy.cpp
++++ b/examples/osgcopy/osgcopy.cpp
+@@ -211,7 +211,7 @@ int main( int argc, char **argv )
+ 
+ // -------------    Start of copy specific code -------------------------------------------------------
+ 
+-    // do a deep copy, using MyCopyOp to reveal whats going on under the hood,
++    // do a deep copy, using MyCopyOp to reveal what's going on under the hood,
+     // in your own code you'd typically just use the basic osg::CopyOp something like
+     osg::ref_ptr<osg::Node> mycopy = dynamic_cast<osg::Node*>(rootnode->clone(osg::CopyOp::DEEP_COPY_ALL));
+     std::cout << "Doing a deep copy of scene graph"<<std::endl;
+diff --git a/examples/osgframerenderer/osgframerenderer.cpp b/examples/osgframerenderer/osgframerenderer.cpp
+index a27803e..c34563b 100644
+--- a/examples/osgframerenderer/osgframerenderer.cpp
++++ b/examples/osgframerenderer/osgframerenderer.cpp
+@@ -77,7 +77,7 @@ int main( int argc, char **argv )
+     arguments.getApplicationUsage()->addCommandLineOption("-o <filename>","Base output filename of the images, recommended to use something like Images/image.png");
+     arguments.getApplicationUsage()->addCommandLineOption("--cs <filename>","Load pre-generated configuration file for run.");
+     arguments.getApplicationUsage()->addCommandLineOption("--ouput-cs <filename>","Output configuration file with settings provided on commandline.");
+-    arguments.getApplicationUsage()->addCommandLineOption("-p <filename>","Use specificied camera path file to control camera position.");
++    arguments.getApplicationUsage()->addCommandLineOption("-p <filename>","Use specified camera path file to control camera position.");
+     arguments.getApplicationUsage()->addCommandLineOption("--offscreen","Use an pbuffer to render the images offscreen.");
+     arguments.getApplicationUsage()->addCommandLineOption("--screen","Use an window to render the images.");
+     arguments.getApplicationUsage()->addCommandLineOption("--width <width>","Window/output image width.");
+diff --git a/examples/osggeometry/osggeometry.cpp b/examples/osggeometry/osggeometry.cpp
+index b3541ba..6195417 100644
+--- a/examples/osggeometry/osggeometry.cpp
++++ b/examples/osggeometry/osggeometry.cpp
+@@ -148,7 +148,7 @@ osg::Node* createScene()
+ 
+         // create a Vec3Array and add to it all my coordinates.
+         // Like all the *Array variants (see include/osg/Array) , Vec3Array is derived from both osg::Array
+-        // and std::vector<>.  osg::Array's are reference counted and hence sharable,
++        // and std::vector<>.  osg::Array's are reference counted and hence shareable,
+         // which std::vector<> provides all the convenience, flexibility and robustness
+         // of the most popular of all STL containers.
+         osg::Vec3Array* vertices = new osg::Vec3Array;
+diff --git a/examples/osgkeyboard/osgkeyboard.cpp b/examples/osgkeyboard/osgkeyboard.cpp
+index e5c5b1d..b709f1f 100644
+--- a/examples/osgkeyboard/osgkeyboard.cpp
++++ b/examples/osgkeyboard/osgkeyboard.cpp
+@@ -64,7 +64,7 @@ void KeyboardModel::keyChange(int key, int virtualKey, int value)
+ {
+     osg::notify(osg::INFO) << "key value change, code="<<std::hex << key << "\t value="<< value << std::dec  << std::endl;
+ 
+-    // toggle the keys graphical representation on or off via osg::Swithc
++    // toggle the keys graphical representation on or off via osg::Switch
+     KeyModelMap::iterator itr = _keyModelMap.find(virtualKey);
+     if (itr!=_keyModelMap.end())
+     {
+diff --git a/examples/osgkeyboardmouse/osgkeyboardmouse.cpp b/examples/osgkeyboardmouse/osgkeyboardmouse.cpp
+index f772e89..49e28ae 100644
+--- a/examples/osgkeyboardmouse/osgkeyboardmouse.cpp
++++ b/examples/osgkeyboardmouse/osgkeyboardmouse.cpp
+@@ -167,7 +167,7 @@ public:
+                     {
+                         osg::notify(osg::NOTICE)<<"Using window coordinates for picking"<<std::endl;
+                     } else {
+-                        osg::notify(osg::NOTICE)<<"Using projection coordiates for picking"<<std::endl;
++                        osg::notify(osg::NOTICE)<<"Using projection coordinates for picking"<<std::endl;
+                     }
+                 }
+                 else if (ea.getKey()=='a')
+@@ -401,7 +401,7 @@ public:
+ 
+         if (cmtsv._group->getNumChildren()>0)
+         {
+-            std::cout<<"Writing selected compoents to 'selected_model.osgt'"<<std::endl;
++            std::cout<<"Writing selected components to 'selected_model.osgt'"<<std::endl;
+             osgDB::writeNodeFile(*cmtsv._group, "selected_model.osgt");
+         }
+     }
+diff --git a/examples/osgparticleshader/osgparticleshader.cpp b/examples/osgparticleshader/osgparticleshader.cpp
+index 00e84a1..9c05e90 100644
+--- a/examples/osgparticleshader/osgparticleshader.cpp
++++ b/examples/osgparticleshader/osgparticleshader.cpp
+@@ -175,7 +175,7 @@ int main( int argc, char** argv )
+     // A floating error of delta-time should be explained here:
+     // The particles emitter, program and updater all use a 'dt' to compute the time value in every frame.
+     // Because the 'dt' is a double value, it is not suitable to keep three copies of it separately, which
+-    // is the previous implementation. The small error makes some opeartors unable to work correctly, e.g.
++    // is the previous implementation. The small error makes some operators unable to work correctly, e.g.
+     // the BounceOperator.
+     // Now we make use of the getDeltaTime() of ParticleSystem to maintain and dispatch the delta time. But..
+     // it is not the best solution so far, since there are still very few particles acting unexpectedly.
+diff --git a/examples/osgposter/osgposter.cpp b/examples/osgposter/osgposter.cpp
+index 6f5cb82..6cdcbcf 100644
+--- a/examples/osgposter/osgposter.cpp
++++ b/examples/osgposter/osgposter.cpp
+@@ -76,7 +76,7 @@ void computeViewMatrixOnEarth( osg::Camera* camera, osg::Node* scene,
+     osg::CoordinateSystemNode* csn = findTopMostNodeOfType<osg::CoordinateSystemNode>(scene);
+     if ( !csn ) return;
+ 
+-    // Compute eye point in world coordiantes
++    // Compute eye point in world coordinates
+     osg::Vec3d eye;
+     csn->getEllipsoidModel()->convertLatLongHeightToXYZ(
+         latLongHeight.x(), latLongHeight.y(), latLongHeight.z(), eye.x(), eye.y(), eye.z() );
+diff --git a/examples/osgreflect/osgreflect.cpp b/examples/osgreflect/osgreflect.cpp
+index 6837a66..ac37bf6 100644
+--- a/examples/osgreflect/osgreflect.cpp
++++ b/examples/osgreflect/osgreflect.cpp
+@@ -39,7 +39,7 @@
+ 
+ //
+ // A simple demo demonstrating planar reflections using multiple renderings
+-// of a subgraph, overriding of state attribures and use of the stencil buffer.
++// of a subgraph, overriding of state attributes and use of the stencil buffer.
+ //
+ // The multipass system implemented here is a variation of Mark Kilgard's
+ // paper "Improving Shadows and Reflections via the Stencil Buffer" which
+diff --git a/examples/osgscreencapture/osgscreencapture.cpp b/examples/osgscreencapture/osgscreencapture.cpp
+index 0169853..771c698 100644
+--- a/examples/osgscreencapture/osgscreencapture.cpp
++++ b/examples/osgscreencapture/osgscreencapture.cpp
+@@ -99,19 +99,19 @@ class WindowCaptureCallback : public osg::Camera::DrawCallback
+                 switch(_mode)
+                 {
+                     case(READ_PIXELS):
+-                        osg::notify(osg::NOTICE)<<"Reading window usig glReadPixels, with out PixelBufferObject."<<std::endl;
++                        osg::notify(osg::NOTICE)<<"Reading window using glReadPixels, with out PixelBufferObject."<<std::endl;
+                         break;
+                     case(SINGLE_PBO):
+-                        osg::notify(osg::NOTICE)<<"Reading window usig glReadPixels, with a single PixelBufferObject."<<std::endl;
++                        osg::notify(osg::NOTICE)<<"Reading window using glReadPixels, with a single PixelBufferObject."<<std::endl;
+                         _pboBuffer.push_back(0);
+                         break;
+                     case(DOUBLE_PBO):
+-                        osg::notify(osg::NOTICE)<<"Reading window usig glReadPixels, with a double buffer PixelBufferObject."<<std::endl;
++                        osg::notify(osg::NOTICE)<<"Reading window using glReadPixels, with a double buffer PixelBufferObject."<<std::endl;
+                         _pboBuffer.push_back(0);
+                         _pboBuffer.push_back(0);
+                         break;
+                     case(TRIPLE_PBO):
+-                        osg::notify(osg::NOTICE)<<"Reading window usig glReadPixels, with a triple buffer PixelBufferObject."<<std::endl;
++                        osg::notify(osg::NOTICE)<<"Reading window using glReadPixels, with a triple buffer PixelBufferObject."<<std::endl;
+                         _pboBuffer.push_back(0);
+                         _pboBuffer.push_back(0);
+                         _pboBuffer.push_back(0);
+diff --git a/examples/osgsequence/osgsequence.cpp b/examples/osgsequence/osgsequence.cpp
+index 91d2473..8f42606 100644
+--- a/examples/osgsequence/osgsequence.cpp
++++ b/examples/osgsequence/osgsequence.cpp
+@@ -69,7 +69,7 @@ osg::Node* createTextGroup(const char** text)
+     // loop through all children
+     seq->setInterval(osg::Sequence::LOOP, 0,-1);
+ 
+-    // real-time playback, repeat indefinitively
++    // real-time playback, repeat indefinitely
+     seq->setDuration(1.0f, -1);
+ 
+     // must be started explicitly
+@@ -157,7 +157,7 @@ osg::Sequence* createSequence(osg::ArgumentParser& arguments)
+     // loop through all children
+     seq->setInterval(osg::Sequence::LOOP, 0,-1);
+ 
+-    // real-time playback, repeat indefinitively
++    // real-time playback, repeat indefinitely
+     seq->setDuration(1.0f, -1);
+ 
+     seq->setMode(osg::Sequence::START);
+@@ -244,7 +244,7 @@ int main( int argc, char **argv )
+         "- is subclassed from osg::Switch",
+         "- assigns a display duration to each child",
+         "- can loop or swing through an interval of it's children",
+-        "- can repeat the interval a number of times or indefinitively",
++        "- can repeat the interval a number of times or indefinitely",
+         "- press 's' to start/pause/resume",
+         "- press 'l' to toggle loop/swing mode",
+         NULL
+diff --git a/examples/osgshadercomposition/oldshadercomposition.cpp b/examples/osgshadercomposition/oldshadercomposition.cpp
+index 2c9e7ca..b9b8040 100644
+--- a/examples/osgshadercomposition/oldshadercomposition.cpp
++++ b/examples/osgshadercomposition/oldshadercomposition.cpp
+@@ -99,7 +99,7 @@ osg::Node* createOldShaderCompositionScene(osg::ArgumentParser& arguments)
+         group->addChild(pat);
+     }
+ 
+-    // resuse the first ShaderAttribute's type and ShaderComponent, just use new uniform
++    // reuse the first ShaderAttribute's type and ShaderComponent, just use new uniform
+     {
+         osg::PositionAttitudeTransform* pat = new osg::PositionAttitudeTransform;
+         pat->setPosition(position);
+@@ -119,7 +119,7 @@ osg::Node* createOldShaderCompositionScene(osg::ArgumentParser& arguments)
+     }
+ 
+ 
+-    // resuse the first ShaderAttribute's type and ShaderComponent, just use new uniform
++    // reuse the first ShaderAttribute's type and ShaderComponent, just use new uniform
+     {
+         osg::PositionAttitudeTransform* pat = new osg::PositionAttitudeTransform;
+         pat->setPosition(position);
+diff --git a/examples/osgshaderterrain/osgshaderterrain.cpp b/examples/osgshaderterrain/osgshaderterrain.cpp
+index cb2f545..ac7ea1d 100644
+--- a/examples/osgshaderterrain/osgshaderterrain.cpp
++++ b/examples/osgshaderterrain/osgshaderterrain.cpp
+@@ -314,7 +314,7 @@ int main(int, char **)
+ 
+     osg::ref_ptr<TestSupportOperation> testSupportOperation = new TestSupportOperation;
+ #if 0
+-    // temporily commenting out as its causing the viewer to crash... no clue yet to why
++    // temporarily commenting out as its causing the viewer to crash... no clue yet to why
+     viewer.setRealizeOperation(testSupportOperation.get());
+ #endif
+     // create the windows and run the threads.
+diff --git a/examples/osgtessellate/osgtessellate.cpp b/examples/osgtessellate/osgtessellate.cpp
+index e2e6b2b..53dfed3 100644
+--- a/examples/osgtessellate/osgtessellate.cpp
++++ b/examples/osgtessellate/osgtessellate.cpp
+@@ -470,7 +470,7 @@ osg::Geometry *makePols (void) {
+     gtess->setStateSet( stateset );
+ 
+     int nstart=0;
+-    // the contours accepoted are polygons; quads & tris. Trifans can bve added later.
++    // the contours accepted are polygons; quads & tris. Trifans can be added later.
+     gtess->addPrimitiveSet(new osg::DrawArrays(osg::PrimitiveSet::QUADS,nstart,12));nstart+=12;
+     gtess->addPrimitiveSet(new osg::DrawArrays(osg::PrimitiveSet::QUADS,nstart,12));nstart+=12;
+     gtess->addPrimitiveSet(new osg::DrawArrays(osg::PrimitiveSet::POLYGON,nstart,16));nstart+=16;
+diff --git a/examples/osgtessellationshaders/osgtessellationshaders.cpp b/examples/osgtessellationshaders/osgtessellationshaders.cpp
+index 766e7fd..15e6bca 100644
+--- a/examples/osgtessellationshaders/osgtessellationshaders.cpp
++++ b/examples/osgtessellationshaders/osgtessellationshaders.cpp
+@@ -1,9 +1,9 @@
+ /* A demonstration of Tessellation Shaders in OpenScenegraph.
+  *
+  * Instructions:
+- *   Press plus to increase tesselation and minus to decrease it.
+- *   Press right arrow to increase inner tesselation and left arrow to decrease it.
+- *   Press up arrow to increase outer tesselation and down arrow to decrease it.
++ *   Press plus to increase tessellation and minus to decrease it.
++ *   Press right arrow to increase inner tessellation and left arrow to decrease it.
++ *   Press up arrow to increase outer tessellation and down arrow to decrease it.
+  *
+  * Original code by Philip Rideout
+  * Adapted to OpenScenegraph by John Kaniarz
+diff --git a/examples/osgtext/osgtext.cpp b/examples/osgtext/osgtext.cpp
+index cb9e3c7..b932791 100644
+--- a/examples/osgtext/osgtext.cpp
++++ b/examples/osgtext/osgtext.cpp
+@@ -683,7 +683,7 @@ int main(int argc, char** argv)
+             text->setFont("fonts/times.ttf");
+             text->setAxisAlignment(osgText::Text::XZ_PLANE);
+             text->setAlignment(osgText::Text::RIGHT_TOP);
+-            text->setText("Alingment\nBefore:");
++            text->setText("Alignment\nBefore:");
+             group->addChild(text);
+         }
+ 
+@@ -691,7 +691,7 @@ int main(int argc, char** argv)
+             osg::ref_ptr<osgText::Text> text = new osgText::Text;
+             text->setFont("fonts/times.ttf");
+             text->setAxisAlignment(osgText::Text::XZ_PLANE);
+-            text->setText("Alingment\nAfter:");
++            text->setText("Alignment\nAfter:");
+             text->setAlignment(osgText::Text::LEFT_TOP);
+             group->addChild(text);
+         }
+diff --git a/examples/osgtexture2D/osgtexture2D.cpp b/examples/osgtexture2D/osgtexture2D.cpp
+index 20b4c72..29a0a41 100644
+--- a/examples/osgtexture2D/osgtexture2D.cpp
++++ b/examples/osgtexture2D/osgtexture2D.cpp
+@@ -543,7 +543,7 @@ public:
+         // now assign the appropriate portion data from the originalImage
+         subImage->setImage(originalImage->s()/2, originalImage->t()/2, originalImage->r(), // half the width and height
+                            originalImage->getInternalTextureFormat(), // same internal texture format
+-                           originalImage->getPixelFormat(),originalImage->getDataType(), // same pixel foramt and data type
++                           originalImage->getPixelFormat(),originalImage->getDataType(), // same pixel format and data type
+                            originalImage->data(originalImage->s()/4,originalImage->t()/4), // offset the start point to 1/4 into the image
+                            osg::Image::NO_DELETE, // don't attempt to delete the image data, leave this to the originalImage
+                            originalImage->getPacking(), // use the same packing
+diff --git a/examples/osgunittests/osgunittests.cpp b/examples/osgunittests/osgunittests.cpp
+index 6c4fb4f..57bbfe0 100644
+--- a/examples/osgunittests/osgunittests.cpp
++++ b/examples/osgunittests/osgunittests.cpp
+@@ -215,7 +215,7 @@ void testGetQuatFromMatrix(const osg::Vec3d& scale)
+     double yaw2stop = 360.0;
+     double yaw2step = 20.0;
+ #else
+-    // focussed range
++    // focused range
+     double rol1start = 0.0;
+     double rol1stop = 0.0;
+     double rol1step = 0.1;
+diff --git a/src/OpenThreads/pthreads/PThread.cpp b/src/OpenThreads/pthreads/PThread.cpp
+index 7cac330..49c75b7 100644
+--- a/src/OpenThreads/pthreads/PThread.cpp
++++ b/src/OpenThreads/pthreads/PThread.cpp
+@@ -229,7 +229,7 @@ private:
+     };
+ 
+     //-------------------------------------------------------------------------
+-    // Print information related to thread schduling parameters.
++    // Print information related to thread scheduling parameters.
+     //
+     static void PrintThreadSchedulingInfo(Thread *thread) {
+ 
+diff --git a/src/OpenThreads/pthreads/PThreadCondition.cpp b/src/OpenThreads/pthreads/PThreadCondition.cpp
+index f1a511f..b6df593 100644
+--- a/src/OpenThreads/pthreads/PThreadCondition.cpp
++++ b/src/OpenThreads/pthreads/PThreadCondition.cpp
+@@ -158,7 +158,7 @@ int Condition::wait(Mutex *mutex, unsigned long int ms) {
+         static_cast<PThreadMutexPrivateData *>(mutex->_prvData);
+ 
+ 
+-    // wait time is now in ms milliseconds, so need to convert to seconds and nanoseconds for timespec strucuture.
++    // wait time is now in ms milliseconds, so need to convert to seconds and nanoseconds for timespec structure.
+     unsigned int sec = ms / 1000;
+     unsigned int nsec = (ms % 1000) * 1000000;
+ 
+diff --git a/src/OpenThreads/win32/Win32Thread.cpp b/src/OpenThreads/win32/Win32Thread.cpp
+index 6b06ff5..731889c 100644
+--- a/src/OpenThreads/win32/Win32Thread.cpp
++++ b/src/OpenThreads/win32/Win32Thread.cpp
+@@ -132,7 +132,7 @@ namespace OpenThreads {
+         };
+ 
+         //-------------------------------------------------------------------------
+-        // Print information related to thread schduling parameters.
++        // Print information related to thread scheduling parameters.
+         //
+         static void PrintThreadSchedulingInfo(Thread *thread) {
+ 
+diff --git a/src/osg/ApplicationUsage.cpp b/src/osg/ApplicationUsage.cpp
+index 325662c..b83e59c 100644
+--- a/src/osg/ApplicationUsage.cpp
++++ b/src/osg/ApplicationUsage.cpp
+@@ -198,7 +198,7 @@ void ApplicationUsage::getFormattedString(std::string& str, const UsageMap& um,u
+                 std::string::size_type slashn_pos = explanation.find('\n',pos);
+ 
+                 unsigned int extraSkip = 0;
+-                bool concatinated = false;
++                bool concatenated = false;
+                 if (slashn_pos!=std::string::npos)
+                 {
+                     if (slashn_pos<pos+width)
+@@ -227,13 +227,13 @@ void ApplicationUsage::getFormattedString(std::string& str, const UsageMap& um,u
+                         // word must be longer than a whole line so will need
+                         // to concatenate it.
+                         width = explanationWidth-1;
+-                        concatinated = true;
++                        concatenated = true;
+                     }
+                 }
+ 
+                 line.replace(explanationPos+offset,explanationWidth, explanation, pos, width);
+ 
+-                if (concatinated) { str += line; str += "-\n"; }
++                if (concatenated) { str += line; str += "-\n"; }
+                 else { str += line; str += "\n"; }
+ 
+                 // move to the next line of output.
+diff --git a/src/osg/BufferObject.cpp b/src/osg/BufferObject.cpp
+index e14231c..b94d980 100644
+--- a/src/osg/BufferObject.cpp
++++ b/src/osg/BufferObject.cpp
+@@ -815,7 +815,7 @@ void GLBufferObjectSet::remove(GLBufferObject* to)
+     }
+     else
+     {
+-        // 'to' was tail so assing tail to the previous in list
++        // 'to' was tail so assign tail to the previous in list
+         _tail = to->_previous;
+     }
+ 
+diff --git a/src/osg/DisplaySettings.cpp b/src/osg/DisplaySettings.cpp
+index 5c699c8..80311b1 100644
+--- a/src/osg/DisplaySettings.cpp
++++ b/src/osg/DisplaySettings.cpp
+@@ -720,9 +720,9 @@ void DisplaySettings::readEnvironmentalVariables()
+     if (getEnvVar("OSG_KEYSTONE_FILES", value))
+     {
+     #if defined(WIN32) && !defined(__CYGWIN__)
+-        char delimitor = ';';
++        char delimiter = ';';
+     #else
+-        char delimitor = ':';
++        char delimiter = ':';
+     #endif
+ 
+         std::string paths(value);
+@@ -730,7 +730,7 @@ void DisplaySettings::readEnvironmentalVariables()
+         {
+             std::string::size_type start = 0;
+             std::string::size_type end;
+-            while ((end = paths.find_first_of(delimitor,start))!=std::string::npos)
++            while ((end = paths.find_first_of(delimiter,start))!=std::string::npos)
+             {
+                 _keystoneFileNames.push_back(std::string(paths,start,end-start));
+                 start = end+1;
+@@ -982,7 +982,7 @@ osg::Matrixd DisplaySettings::computeLeftEyeProjectionImplementation(const osg::
+     else
+     {
+         // all other display types assume working like a projected power wall
+-        // need to shjear projection matrix to account for asymetric frustum due to eye offset.
++        // need to shjear projection matrix to account for asymmetric frustum due to eye offset.
+         return osg::Matrixd(1.0,0.0,0.0,0.0,
+                            0.0,1.0,0.0,0.0,
+                            iod/(2.0*sd),0.0,1.0,0.0,
+@@ -1035,7 +1035,7 @@ osg::Matrixd DisplaySettings::computeRightEyeProjectionImplementation(const osg:
+     else
+     {
+         // all other display types assume working like a projected power wall
+-        // need to shjear projection matrix to account for asymetric frustum due to eye offset.
++        // need to shjear projection matrix to account for asymmetric frustum due to eye offset.
+         return osg::Matrixd(1.0,0.0,0.0,0.0,
+                            0.0,1.0,0.0,0.0,
+                            -iod/(2.0*sd),0.0,1.0,0.0,
+diff --git a/src/osg/Group.cpp b/src/osg/Group.cpp
+index 7b0ba60..4205fde 100644
+--- a/src/osg/Group.cpp
++++ b/src/osg/Group.cpp
+@@ -169,7 +169,7 @@ bool Group::removeChildren(unsigned int pos,unsigned int numChildrenToRemove)
+         if (endOfRemoveRange>_children.size())
+         {
+             OSG_DEBUG<<"Warning: Group::removeChild(i,numChildrenToRemove) has been passed an excessive number"<<std::endl;
+-            OSG_DEBUG<<"         of chilren to remove, trimming just to end of child list."<<std::endl;
++            OSG_DEBUG<<"         of children to remove, trimming just to end of child list."<<std::endl;
+             endOfRemoveRange=_children.size();
+         }
+ 
+diff --git a/src/osg/Image.cpp b/src/osg/Image.cpp
+index 2489538..951e283 100644
+--- a/src/osg/Image.cpp
++++ b/src/osg/Image.cpp
+@@ -749,7 +749,7 @@ unsigned int Image::computePixelSizeInBits(GLenum format,GLenum type)
+     // which raises the question of how to actually query for these sizes...
+     // will need to revisit this issue, for now just report an error.
+     // this is possible a bit of mute point though as since the ARB compressed formats
+-    // aren't yet used for storing images to disk, so its likely that users wont have
++    // aren't yet used for storing images to disk, so its likely that users won't have
+     // osg::Image's for pixel formats set the ARB compressed formats, just using these
+     // compressed formats as internal texture modes.  This is very much speculation though
+     // if get the below error then its time to revist this issue :-)
+diff --git a/src/osg/PrimitiveSetIndirect.cpp b/src/osg/PrimitiveSetIndirect.cpp
+index 36d18e5..a8ceff0 100644
+--- a/src/osg/PrimitiveSetIndirect.cpp
++++ b/src/osg/PrimitiveSetIndirect.cpp
+@@ -78,7 +78,7 @@ void DrawElementsIndirectUInt::draw(State& state, bool /*useVertexBufferObjects*
+ 
+     state.get<GLExtensions>()-> glDrawElementsIndirect(mode, GL_UNSIGNED_INT,
+         (const GLvoid *)(dibo->getOffset(_indirectCommandArray->getBufferIndex()) //command array address
+-        +_firstCommand* _indirectCommandArray->getElementSize())// runtime offset computaion can be sizeof(*_indirectCommandArray->begin())
++        +_firstCommand* _indirectCommandArray->getElementSize())// runtime offset computation can be sizeof(*_indirectCommandArray->begin())
+     );
+ }
+ 
+diff --git a/src/osg/Shader.cpp b/src/osg/Shader.cpp
+index de90557..94c90d2 100644
+--- a/src/osg/Shader.cpp
++++ b/src/osg/Shader.cpp
+@@ -780,7 +780,7 @@ void Shader::_parseShaderDefines(const std::string& str, ShaderDefines& defines)
+     std::string::size_type start_of_parameter = 0;
+     do
+     {
+-        // skip spaces, tabs, commans
++        // skip spaces, tabs, commands
+         start_of_parameter = find_first(str, NoneOf(" \t,"), start_of_parameter);
+         if (start_of_parameter==std::string::npos) break;
+ 
+diff --git a/src/osg/ShaderComposer.cpp b/src/osg/ShaderComposer.cpp
+index 82c0c48..4da4f15 100644
+--- a/src/osg/ShaderComposer.cpp
++++ b/src/osg/ShaderComposer.cpp
+@@ -103,7 +103,7 @@ osg::Program* ShaderComposer::getOrCreateProgram(const ShaderComponents& shaderC
+                     computeShaders.push_back(shader);
+                     break;
+                 case(Shader::UNDEFINED):
+-                    OSG_WARN<<"Warning: ShaderCompose::getOrCreateProgam(ShaderComponts) encounterd invalid Shader::Type."<<std::endl;
++                    OSG_WARN<<"Warning: ShaderCompose::getOrCreateProgam(ShaderComponts) encountered invalid Shader::Type."<<std::endl;
+                     break;
+             }
+         }
+diff --git a/src/osg/State.cpp b/src/osg/State.cpp
+index 5cd5b3e..a2b88c8 100644
+--- a/src/osg/State.cpp
++++ b/src/osg/State.cpp
+@@ -52,8 +52,8 @@ State::State():
+     _shaderComposer = new ShaderComposer;
+     _currentShaderCompositionProgram = 0L;
+ 
+-    _drawBuffer = GL_INVALID_ENUM; // avoid the lazy state mechanism from ignoreing the first call to State::glDrawBuffer() to make sure it's always passed to OpenGL
+-    _readBuffer = GL_INVALID_ENUM; // avoid the lazy state mechanism from ignoreing the first call to State::glReadBuffer() to make sure it's always passed to OpenGL
++    _drawBuffer = GL_INVALID_ENUM; // avoid the lazy state mechanism from ignoring the first call to State::glDrawBuffer() to make sure it's always passed to OpenGL
++    _readBuffer = GL_INVALID_ENUM; // avoid the lazy state mechanism from ignoring the first call to State::glReadBuffer() to make sure it's always passed to OpenGL
+ 
+     _identity = new osg::RefMatrix(); // default RefMatrix constructs to identity.
+     _initialViewMatrix = _identity;
+@@ -811,7 +811,7 @@ void State::applyShaderComposition()
+         {
+             // if (isNotifyEnabled(osg::INFO)) print(notify(osg::INFO));
+ 
+-            // build lits of current ShaderComponents
++            // build list of current ShaderComponents
+             ShaderComponents shaderComponents;
+ 
+             // OSG_NOTICE<<"State::applyShaderComposition() : _attributeMap.size()=="<<_attributeMap.size()<<std::endl;
+diff --git a/src/osg/Texture.cpp b/src/osg/Texture.cpp
+index 2d3375f..d6c2f86 100644
+--- a/src/osg/Texture.cpp
++++ b/src/osg/Texture.cpp
+@@ -921,7 +921,7 @@ void TextureObjectSet::remove(Texture::TextureObject* to)
+     }
+     else
+     {
+-        // 'to' was tail so assing tail to the previous in list
++        // 'to' was tail so assign tail to the previous in list
+         _tail = to->_previous;
+     }
+ 
+diff --git a/src/osg/Texture1D.cpp b/src/osg/Texture1D.cpp
+index 23e6f4a..f0c5a1f 100644
+--- a/src/osg/Texture1D.cpp
++++ b/src/osg/Texture1D.cpp
+@@ -194,7 +194,7 @@ void Texture1D::apply(State& state) const
+ 
+         textureObject->setAllocated(_numMipmapLevels,_internalFormat,_textureWidth,1,1,0);
+ 
+-        // in theory the following line is redundent, but in practice
++        // in theory the following line is redundant, but in practice
+         // have found that the first frame drawn doesn't apply the textures
+         // unless a second bind is called?!!
+         // perhaps it is the first glBind which is not required...
+diff --git a/src/osg/Texture2D.cpp b/src/osg/Texture2D.cpp
+index f256793..452b97f 100644
+--- a/src/osg/Texture2D.cpp
++++ b/src/osg/Texture2D.cpp
+@@ -233,7 +233,7 @@ void Texture2D::apply(State& state) const
+ 
+         textureObject->setAllocated(_numMipmapLevels,_internalFormat,_textureWidth,_textureHeight,1,_borderWidth);
+ 
+-        // in theory the following line is redundent, but in practice
++        // in theory the following line is redundant, but in practice
+         // have found that the first frame drawn doesn't apply the textures
+         // unless a second bind is called?!!
+         // perhaps it is the first glBind which is not required...
+@@ -288,7 +288,7 @@ void Texture2D::apply(State& state) const
+             non_const_this->_image = NULL;
+         }
+ 
+-        // in theory the following line is redundent, but in practice
++        // in theory the following line is redundant, but in practice
+         // have found that the first frame drawn doesn't apply the textures
+         // unless a second bind is called?!!
+         // perhaps it is the first glBind which is not required...
+diff --git a/src/osg/Texture3D.cpp b/src/osg/Texture3D.cpp
+index ee97e69..75cb3b3 100644
+--- a/src/osg/Texture3D.cpp
++++ b/src/osg/Texture3D.cpp
+@@ -276,7 +276,7 @@ void Texture3D::apply(State& state) const
+ 
+         textureObject->setAllocated(_numMipmapLevels,_internalFormat,_textureWidth,_textureHeight,_textureDepth,0);
+ 
+-        // in theory the following line is redundent, but in practice
++        // in theory the following line is redundant, but in practice
+         // have found that the first frame drawn doesn't apply the textures
+         // unless a second bind is called?!!
+         // perhaps it is the first glBind which is not required...
+diff --git a/src/osg/TextureCubeMap.cpp b/src/osg/TextureCubeMap.cpp
+index a2807ce..fa58448 100644
+--- a/src/osg/TextureCubeMap.cpp
++++ b/src/osg/TextureCubeMap.cpp
+@@ -271,7 +271,7 @@ void TextureCubeMap::apply(State& state) const
+ 
+         _subloadCallback->load(*this,state);
+ 
+-        // in theory the following line is redundent, but in practice
++        // in theory the following line is redundant, but in practice
+         // have found that the first frame drawn doesn't apply the textures
+         // unless a second bind is called?!!
+         // perhaps it is the first glBind which is not required...
+diff --git a/src/osgDB/FileUtils.cpp b/src/osgDB/FileUtils.cpp
+index c0c8cec..73c62f5 100644
+--- a/src/osgDB/FileUtils.cpp
++++ b/src/osgDB/FileUtils.cpp
+@@ -275,16 +275,16 @@ bool osgDB::setCurrentWorkingDirectory( const std::string &newCurrentWorkingDire
+ void osgDB::convertStringPathIntoFilePathList(const std::string& paths,FilePathList& filepath)
+ {
+ #if defined(WIN32) && !defined(__CYGWIN__)
+-    char delimitor = ';';
++    char delimiter = ';';
+ #else
+-    char delimitor = ':';
++    char delimiter = ':';
+ #endif
+ 
+     if (!paths.empty())
+     {
+         std::string::size_type start = 0;
+         std::string::size_type end;
+-        while ((end = paths.find_first_of(delimitor,start))!=std::string::npos)
++        while ((end = paths.find_first_of(delimiter,start))!=std::string::npos)
+         {
+             filepath.push_back(std::string(paths,start,end-start));
+             start = end+1;
+@@ -988,7 +988,7 @@ bool osgDB::containsCurrentWorkingDirectoryReference(const FilePathList& paths)
+     // The Carbon version is noticeably longer.
+     // Unfortunately, the Cocoa version requires -lobjc to be
+     // linked in when creating an executable.
+-    // Rumor is that this will be done autmatically in gcc 3.5/Tiger,
++    // Rumor is that this will be done automatically in gcc 3.5/Tiger,
+     // but for now, this will cause a lot of headaches for people
+     // who aren't familiar with this concept, so the Carbon version
+     // is preferable.
+diff --git a/src/osgDB/OutputStream.cpp b/src/osgDB/OutputStream.cpp
+index 6db556d..8684806 100644
+--- a/src/osgDB/OutputStream.cpp
++++ b/src/osgDB/OutputStream.cpp
+@@ -576,7 +576,7 @@ void OutputStream::writeImage( const osg::Image* img )
+                     std::string encodedData;
+                     e.encode((char*)img_itr.data(), img_itr.size(), encodedData);
+                     // Each set of data is written into a separate string so we can
+-                    // distiguish between main data and all mipmap levels, so writing
++                    // distinguish between main data and all mipmap levels, so writing
+                     // mipmap size is not required for ASCII mode.
+                     writeWrappedString(encodedData);
+                 }
+@@ -781,7 +781,7 @@ void OutputStream::start( OutputIterator* outIterator, OutputStream::WriteType t
+         }
+ 
+         // From SOVERSION 98, start to support binary begin/end brackets so we can easily ignore
+-        // errors and unsupport classes, enabling the attribute bit
++        // errors and unsupported classes, enabling the attribute bit
+         if ( _useRobustBinaryFormat )
+         {
+             outIterator->setSupportBinaryBrackets( true );
+diff --git a/src/osgDB/Registry.cpp b/src/osgDB/Registry.cpp
+index b3d1454..9723c02 100644
+--- a/src/osgDB/Registry.cpp
++++ b/src/osgDB/Registry.cpp
+@@ -434,7 +434,7 @@ Registry::Registry()
+     addFileExtensionAlias("fnt",    "freetype");  // Windows bitmap fonts
+     addFileExtensionAlias("text3d", "freetype"); // use 3D Font instead of 2D Font
+ 
+-    // wont't add type1 and type2 until resolve extension collision with Performer binary and ascii files.
++    // won't add type1 and type2 until resolve extension collision with Performer binary and ascii files.
+     // addFileExtensionAlias("pfb",   "freetype");  // type1 binary
+     // addFileExtensionAlias("pfa",   "freetype");  // type2 ascii
+ 
+diff --git a/src/osgPlugins/3ds/WriterCompareTriangle.cpp b/src/osgPlugins/3ds/WriterCompareTriangle.cpp
+index 6dbe931..cf3e10d 100644
+--- a/src/osgPlugins/3ds/WriterCompareTriangle.cpp
++++ b/src/osgPlugins/3ds/WriterCompareTriangle.cpp
+@@ -49,14 +49,14 @@ void WriterCompareTriangle::cutscene(int nbVertices, const osg::BoundingBox & sc
+     int nbVerticesY = static_cast<int>( (nbVertices * k) / (length.z() * length.x()) );
+     int nbVerticesZ = static_cast<int>( (nbVertices * k) / (length.x() * length.y()) );
+ 
+-    setMaxMin (nbVerticesX, nbVerticesY, nbVerticesZ); // This function prevent from cutting the scene in too many blocs
++    setMaxMin (nbVerticesX, nbVerticesY, nbVerticesZ); // This function prevent from cutting the scene in too many blocks
+ 
+     OSG_INFO
+         << "Cutting x by " << nbVerticesX << std::endl
+         << "Cutting y by " << nbVerticesY << std::endl
+         << "Cutting z by " << nbVerticesZ << std::endl;
+ 
+-    osg::BoundingBox::value_type blocX = length.x() / nbVerticesX;    // These 3 lines set the size of a bloc in x, y and z
++    osg::BoundingBox::value_type blocX = length.x() / nbVerticesX;    // These 3 lines set the size of a block in x, y and z
+     osg::BoundingBox::value_type blocY = length.y() / nbVerticesY;
+     osg::BoundingBox::value_type blocZ = length.z() / nbVerticesZ;
+ 
+@@ -95,7 +95,7 @@ void WriterCompareTriangle::cutscene(int nbVertices, const osg::BoundingBox & sc
+                 if (z == nbVerticesZ - 1) //to prevent from mesh with no case
+                     zMax += 10;
+ 
+-                boxList.push_back(osg::BoundingBox(xMin, // Add a bloc to the list
++                boxList.push_back(osg::BoundingBox(xMin, // Add a block to the list
+                     yMin,
+                     zMin,
+                     xMax,
+@@ -129,7 +129,7 @@ WriterCompareTriangle::inWhichBox(const osg::BoundingBox::value_type x,
+             return i;
+         }
+     }
+-    assert(false && "Point is not in any blocs");
++    assert(false && "Point is not in any blocks");
+     return 0;
+ }
+ 
+diff --git a/src/osgPlugins/OpenCASCADE/ReaderWriterOpenCASCADE.cpp b/src/osgPlugins/OpenCASCADE/ReaderWriterOpenCASCADE.cpp
+index bca1c0e..91a1422 100644
+--- a/src/osgPlugins/OpenCASCADE/ReaderWriterOpenCASCADE.cpp
++++ b/src/osgPlugins/OpenCASCADE/ReaderWriterOpenCASCADE.cpp
+@@ -124,7 +124,7 @@ osgDB::ReaderWriter::WriteResult ReaderWritterOpenCASCADE::writeNode(const osg::
+ /// \detail http://www.opencascade.org/org/forum/thread_12716/?forum=3
+ ///         Usually IGES files suffer from precision problems (when transferring from
+ ///         one CAD system to another).It might be the case that faces are not sewed
+-///         properly,  or do not have the right precision, and so the tesselator does
++///         properly,  or do not have the right precision, and so the tessellator does
+ ///         not treat them like "sewed". this needs to be done for sewing
+ /// \param shape opencascade shape to be healed
+ void ReaderWritterOpenCASCADE::OCCTKReader::_healShape(TopoDS_Shape& shape)
+@@ -386,7 +386,7 @@ void ReaderWritterOpenCASCADE::OCCTKReader::_traverse(const TDF_Label &shapeTree
+         }
+ 
+         /// if referred shape has children traverse them first else
+-        /// travese the shape itself
++        /// traverse the shape itself
+         if(referredShape.HasChild())
+         {
+             TDF_ChildIterator it;
+diff --git a/src/osgPlugins/OpenFlight/ExportOptions.cpp b/src/osgPlugins/OpenFlight/ExportOptions.cpp
+index 06894d5..f03c101 100644
+--- a/src/osgPlugins/OpenFlight/ExportOptions.cpp
++++ b/src/osgPlugins/OpenFlight/ExportOptions.cpp
+@@ -150,7 +150,7 @@ ExportOptions::parseOptionsString()
+         else
+             pos += (count+1);
+ 
+-        // See if it's a Boolen/toggle
++        // See if it's a Boolean/toggle
+         if ( token == _validateOption )
+         {
+             OSG_INFO << "fltexp: Found: " << token << std::endl;
+diff --git a/src/osgPlugins/QTKit/ReaderWriterQTKit.cpp b/src/osgPlugins/QTKit/ReaderWriterQTKit.cpp
+index e1f8553..b3ed715 100644
+--- a/src/osgPlugins/QTKit/ReaderWriterQTKit.cpp
++++ b/src/osgPlugins/QTKit/ReaderWriterQTKit.cpp
+@@ -87,7 +87,7 @@ class ReaderWriterQTKit : public osgDB::ReaderWriter
+             if (ext=="QTKit")
+             {
+                 fileName = osgDB::getNameLessExtension(fileName);
+-                OSG_INFO<<"ReaderWriterQTKit stipped filename = "<<fileName<<std::endl;
++                OSG_INFO<<"ReaderWriterQTKit stripped filename = "<<fileName<<std::endl;
+             }
+             if (!osgDB::containsServerAddress(fileName))
+             {
+diff --git a/src/osgPlugins/RestHttpDevice/ReaderWriterRestHttpDevice.cpp b/src/osgPlugins/RestHttpDevice/ReaderWriterRestHttpDevice.cpp
+index b374294..9fdecf5 100644
+--- a/src/osgPlugins/RestHttpDevice/ReaderWriterRestHttpDevice.cpp
++++ b/src/osgPlugins/RestHttpDevice/ReaderWriterRestHttpDevice.cpp
+@@ -110,7 +110,7 @@ class ReaderWriterRestHttp : public osgDB::ReaderWriter
+                 }
+                 catch(...)
+                 {
+-                    OSG_WARN << "ReaderWriterRestHttpDevice : could not create http-server, unknown excpetion thrown " << std::endl;
++                    OSG_WARN << "ReaderWriterRestHttpDevice : could not create http-server, unknown exception thrown " << std::endl;
+                     return ReadResult::ERROR_IN_READING_FILE;
+                 }
+                 
+diff --git a/src/osgPlugins/ac/Geode.cpp b/src/osgPlugins/ac/Geode.cpp
+index e656ae9..7e262c1 100644
+--- a/src/osgPlugins/ac/Geode.cpp
++++ b/src/osgPlugins/ac/Geode.cpp
+@@ -715,7 +715,7 @@ void Geode::ProcessGeometry(ostream& fout, const unsigned int ioffset)
+     int iNumMaterials = 0;
+     const osg::StateSet::RefAttributePair* pRAP=NULL;
+     // Let ac3d optimise the file
+-    // whiz round and get a list of materails
++    // whiz round and get a list of materials
+     // write them out
+     // write out an object for each drawable.
+     // Write out world object
+@@ -764,7 +764,7 @@ void Geode::ProcessGeometry(ostream& fout, const unsigned int ioffset)
+                     fout << "OBJECT poly" << std::endl;
+                     fout << "name \"" << getName() << "\"" << std::endl;
+ 
+-                    // Use zero offset co-ordinate as location IS OPTIONAL
++                    // Use zero offset coordinate as location IS OPTIONAL
+                     // fout << "loc " << "0 0 0" << std::endl;
+                     /* you could have an offset for the coordinates;  it was suggested that the first coord would do.
+                     if((*pVertexArray).getType()==osg::Array::Vec3ArrayType) {
+diff --git a/src/osgPlugins/ac/ac3d.cpp b/src/osgPlugins/ac/ac3d.cpp
+index d4f7535..9e3d715 100644
+--- a/src/osgPlugins/ac/ac3d.cpp
++++ b/src/osgPlugins/ac/ac3d.cpp
+@@ -1355,7 +1355,7 @@ readObject(std::istream& stream, FileData& fileData, const osg::Matrix& parentTr
+                             return group.release();
+                         }
+ 
+-                        // Read the texture corrdinates
++                        // Read the texture coordinates
+                         osg::Vec2 texCoord;
+                         stream >> texCoord[0] >> texCoord[1];
+                         if (!stream) {
+diff --git a/src/osgPlugins/avfoundation/ReaderWriterAVFoundation.cpp b/src/osgPlugins/avfoundation/ReaderWriterAVFoundation.cpp
+index f6504e2..21e82e0 100644
+--- a/src/osgPlugins/avfoundation/ReaderWriterAVFoundation.cpp
++++ b/src/osgPlugins/avfoundation/ReaderWriterAVFoundation.cpp
+@@ -52,7 +52,7 @@ class ReaderWriterAVFoundation : public osgDB::ReaderWriter
+             if (ext=="avfoundation")
+             {
+                 fileName = osgDB::getNameLessExtension(fileName);
+-                OSG_INFO<<"AVFoundation stipped filename = "<<fileName<<std::endl;
++                OSG_INFO<<"AVFoundation stripped filename = "<<fileName<<std::endl;
+             }
+             if (!osgDB::containsServerAddress(fileName))
+             {
+diff --git a/src/osgPlugins/dae/daeRGeometry.cpp b/src/osgPlugins/dae/daeRGeometry.cpp
+index 088105d..a574976 100644
+--- a/src/osgPlugins/dae/daeRGeometry.cpp
++++ b/src/osgPlugins/dae/daeRGeometry.cpp
+@@ -769,7 +769,7 @@ struct VertexIndices
+         return false;
+     }
+ 
+-    /// Templated getter for memebers, used for createGeometryArray()
++    /// Templated getter for members, used for createGeometryArray()
+     enum ValueType { POSITION, COLOR, NORMAL, TEXCOORD };
+     template <int Value>
+     inline int get() const;
+diff --git a/src/osgPlugins/dae/daeRMaterials.cpp b/src/osgPlugins/dae/daeRMaterials.cpp
+index 5da9d60..c8f02da 100644
+--- a/src/osgPlugins/dae/daeRMaterials.cpp
++++ b/src/osgPlugins/dae/daeRMaterials.cpp
+@@ -768,7 +768,7 @@ bool daeReader::GetFloat4Param(xsNCName Reference, domFloat4 &f4) const
+         size_t NumberOfSetParams = SetParamArray.getCount();
+         for (size_t i = 0; i < NumberOfSetParams; i++)
+         {
+-            // Just do a simple comaprison of the ref strings for the time being
++            // Just do a simple comparison of the ref strings for the time being
+             if (0 == strcmp(SetParamArray[i]->getRef(), Reference))
+             {
+                 if (NULL != SetParamArray[i]->getFx_basic_type_common() && (NULL != SetParamArray[i]->getFx_basic_type_common()->getFloat4()))
+@@ -815,7 +815,7 @@ bool daeReader::GetFloatParam(xsNCName Reference, domFloat &f) const
+         size_t NumberOfSetParams = SetParamArray.getCount();
+         for (size_t i = 0; i < NumberOfSetParams; i++)
+         {
+-            // Just do a simple comaprison of the ref strings for the time being
++            // Just do a simple comparison of the ref strings for the time being
+             if (0 == strcmp(SetParamArray[i]->getRef(), Reference))
+             {
+                 if (NULL != SetParamArray[i]->getFx_basic_type_common() && (NULL != SetParamArray[i]->getFx_basic_type_common()->getFloat()))
+diff --git a/src/osgPlugins/dae/daeWMaterials.cpp b/src/osgPlugins/dae/daeWMaterials.cpp
+index 2be1cc6..b70397f 100644
+--- a/src/osgPlugins/dae/daeWMaterials.cpp
++++ b/src/osgPlugins/dae/daeWMaterials.cpp
+@@ -112,7 +112,7 @@ void daeWriter::processMaterial( osg::StateSet *ss, domBind_material *pDomBindMa
+         std::string fileURI;
+         if (_pluginOptions.linkOrignialTextures)
+         {
+-            // We link to orignial images (not the ones in memory).
++            // We link to original images (not the ones in memory).
+             fileURI = osgDB::findDataFile(osgimg->getFileName());
+             if (fileURI=="" && _pluginOptions.forceTexture)
+             {
+diff --git a/src/osgPlugins/dicom/ReaderWriterDICOM.cpp b/src/osgPlugins/dicom/ReaderWriterDICOM.cpp
+index bffdd33..2f4c50f 100644
+--- a/src/osgPlugins/dicom/ReaderWriterDICOM.cpp
++++ b/src/osgPlugins/dicom/ReaderWriterDICOM.cpp
+@@ -129,7 +129,7 @@ class ReaderWriterDICOM : public osgDB::ReaderWriter
+ 
+                 if ((*itr)[0]=='.')
+                 {
+-                    info()<<"Ignoring tempory file "<<*itr<<std::endl;
++                    info()<<"Ignoring temporary file "<<*itr<<std::endl;
+                     continue;
+                 }
+ 
+diff --git a/src/osgPlugins/directshow/DirectShowTexture.cpp b/src/osgPlugins/directshow/DirectShowTexture.cpp
+index dfb087b..d269f8a 100644
+--- a/src/osgPlugins/directshow/DirectShowTexture.cpp
++++ b/src/osgPlugins/directshow/DirectShowTexture.cpp
+@@ -837,11 +837,11 @@ struct ListDeviceAvailable
+                 _listDevice[i]._device->Release();
+     }
+ 
+-    void displayDevicesFound(const std::string& prefixForMessage, osg::NotifySeverity serverity = osg::NOTICE) const
++    void displayDevicesFound(const std::string& prefixForMessage, osg::NotifySeverity severity = osg::NOTICE) const
+     {
+         for (int i = 0; i < (int)_listDevice.size(); i++)
+         {
+-            OSG_NOTIFY(serverity) << prefixForMessage << " device \"" << _listDevice[i]._name << "\" clsid " << _listDevice[i]._clsid << std::endl;
++            OSG_NOTIFY(severity) << prefixForMessage << " device \"" << _listDevice[i]._name << "\" clsid " << _listDevice[i]._clsid << std::endl;
+         }
+     }
+ 
+diff --git a/src/osgPlugins/dxf/ReaderWriterDXF.cpp b/src/osgPlugins/dxf/ReaderWriterDXF.cpp
+index c45e792..ecc14dd 100644
+--- a/src/osgPlugins/dxf/ReaderWriterDXF.cpp
++++ b/src/osgPlugins/dxf/ReaderWriterDXF.cpp
+@@ -40,8 +40,8 @@ public:
+         supportsOption("UTF8", "Assuming UTF8 encoding of dxf text");
+         supportsOption("UTF16", "Assuming UTF16 encoding of dxf text");
+         supportsOption("UTF32", "Assuming UTF32 encoding of dxf text");
+-        supportsOption("SIGNATURE", "Detrmine encoding of dxf text from it's signative");
+-        supportsOption("WideChar | CurrentCodePage", "Detrmine encoding of dxf text using CurrentCodePage (Windows only.)");
++        supportsOption("SIGNATURE", "Determine encoding of dxf text from it's signative");
++        supportsOption("WideChar | CurrentCodePage", "Determine encoding of dxf text using CurrentCodePage (Windows only.)");
+         supportsOption("FontFile=<fontfile>", "Set the font file for dxf text");
+     }
+ 
+diff --git a/src/osgPlugins/gles/AnimationCleanerVisitor.cpp b/src/osgPlugins/gles/AnimationCleanerVisitor.cpp
+index ffa8e8d..ab3ccb5 100644
+--- a/src/osgPlugins/gles/AnimationCleanerVisitor.cpp
++++ b/src/osgPlugins/gles/AnimationCleanerVisitor.cpp
+@@ -177,7 +177,7 @@ void AnimationCleanerVisitor::cleanInvalidMorphGeometries() {
+ 
+ void AnimationCleanerVisitor::cleanInvalidRigGeometries() {
+     // Replace rig geometries by static geometries if:
+-    //   * empty or inexistant vertex influence map
++    //   * empty or inexistent vertex influence map
+     //   * no *strictly* positive influence coefficient
+     for(RigGeometryList::iterator iterator = _rigGeometries.begin() ; iterator != _rigGeometries.end() ; ) {
+         osg::ref_ptr<osgAnimation::RigGeometry> rigGeometry = *iterator;
+diff --git a/src/osgPlugins/gles/TangentSpaceVisitor.cpp b/src/osgPlugins/gles/TangentSpaceVisitor.cpp
+index aa7264a..f029aba 100644
+--- a/src/osgPlugins/gles/TangentSpaceVisitor.cpp
++++ b/src/osgPlugins/gles/TangentSpaceVisitor.cpp
+@@ -24,7 +24,7 @@ void TangentSpaceVisitor::process(osg::Geometry& geometry) {
+             return;
+         }
+         else {
+-            OSG_WARN << "Anomaly: [TangentSpaceVisitor] Missing tangent array at specificied index." << std::endl;
++            OSG_WARN << "Anomaly: [TangentSpaceVisitor] Missing tangent array at specified index." << std::endl;
+         }
+     }
+ 
+diff --git a/src/osgPlugins/hdr/hdrwriter.cpp b/src/osgPlugins/hdr/hdrwriter.cpp
+index 5d76025..07c2946 100644
+--- a/src/osgPlugins/hdr/hdrwriter.cpp
++++ b/src/osgPlugins/hdr/hdrwriter.cpp
+@@ -8,7 +8,7 @@
+     developed by Greg Ward.  It handles the conversions between rgbe and
+     pixels consisting of floats.  The data is assumed to be an array of floats.
+     By default there are three floats per pixel in the order red, green, blue.
+-    (RGBE_DATA_??? values control this.)  Only the mimimal header reading and
++    (RGBE_DATA_??? values control this.)  Only the minimal header reading and
+     writing is implemented.  Each routine does error checking and will return
+     a status value as defined below.  This code is intended as a skeleton so
+     feel free to modify it to suit your needs.
+diff --git a/src/osgPlugins/ive/VolumeTransferFunctionProperty.cpp b/src/osgPlugins/ive/VolumeTransferFunctionProperty.cpp
+index 2d313f5..1ae3663 100644
+--- a/src/osgPlugins/ive/VolumeTransferFunctionProperty.cpp
++++ b/src/osgPlugins/ive/VolumeTransferFunctionProperty.cpp
+@@ -53,7 +53,7 @@ void VolumeTransferFunctionProperty::write(DataOutputStream* out)
+         // write out the num of colours
+         out->writeUInt(numColours);
+ 
+-        // write out the colour map entires
++        // write out the colour map entries
+         for(osg::TransferFunction1D::ColorMap::const_iterator itr = colourMap.begin();
+             itr != colourMap.end();
+             ++itr)
+diff --git a/src/osgPlugins/jpeg/EXIF_Orientation.cpp b/src/osgPlugins/jpeg/EXIF_Orientation.cpp
+index 388a6ac..e8f4726 100644
+--- a/src/osgPlugins/jpeg/EXIF_Orientation.cpp
++++ b/src/osgPlugins/jpeg/EXIF_Orientation.cpp
+@@ -140,7 +140,7 @@ int EXIF_Orientation (j_decompress_ptr cinfo)
+     a pointer to the actual value, are packed into these 12 byte entries. */
+     if ((i + tags * 12) > exif_marker->data_length)
+     {
+-        OSG_INFO<<"Not enough length for requied tags"<<std::endl;
++        OSG_INFO<<"Not enough length for required tags"<<std::endl;
+         return 0;
+     }
+ 
+diff --git a/src/osgPlugins/las/ReaderWriterLAS.cpp b/src/osgPlugins/las/ReaderWriterLAS.cpp
+index 547d546..91b1ff1 100644
+--- a/src/osgPlugins/las/ReaderWriterLAS.cpp
++++ b/src/osgPlugins/las/ReaderWriterLAS.cpp
+@@ -28,7 +28,7 @@ class ReaderWriterLAS : public osgDB::ReaderWriter
+             supportsExtension("las", "LAS point cloud format");
+             supportsExtension("laz", "compressed LAS point cloud format");
+             supportsOption("v", "Verbose output");
+-            supportsOption("noScale", "don't scale vertices according to las haeder - put schale in matixTransform");
++            supportsOption("noScale", "don't scale vertices according to las header - put scale in matrixTransform");
+             supportsOption("noReCenter", "don't transform vertex coords to re-center the pointcloud");
+         }
+ 
+diff --git a/src/osgPlugins/obj/ReaderWriterOBJ.cpp b/src/osgPlugins/obj/ReaderWriterOBJ.cpp
+index c16bed0..b93acf5 100644
+--- a/src/osgPlugins/obj/ReaderWriterOBJ.cpp
++++ b/src/osgPlugins/obj/ReaderWriterOBJ.cpp
+@@ -59,7 +59,7 @@ public:
+     {
+         supportsExtension("obj","Alias Wavefront OBJ format");
+         supportsOption("noRotation","Do not do the default rotate about X axis");
+-        supportsOption("noTesselateLargePolygons","Do not do the default tesselation of large polygons");
++        supportsOption("noTesselateLargePolygons","Do not do the default tessellation of large polygons");
+         supportsOption("noTriStripPolygons","Do not do the default tri stripping of polygons");
+         supportsOption("generateFacetNormals","generate facet normals for vertices without normals");
+         supportsOption("noReverseFaces","avoid to reverse faces when normals and triangles orientation are reversed");
+diff --git a/src/osgPlugins/osga/OSGA_Archive.cpp b/src/osgPlugins/osga/OSGA_Archive.cpp
+index b9f518a..5c50386 100644
+--- a/src/osgPlugins/osga/OSGA_Archive.cpp
++++ b/src/osgPlugins/osga/OSGA_Archive.cpp
+@@ -351,7 +351,7 @@ bool OSGA_Archive::open(const std::string& filename, ArchiveStatus status, unsig
+             _input.seekg( 0, std::ios_base::end );
+             file_size = ARCHIVE_POS( _input.tellg() );
+             if( _input.is_open() && file_size <= 0 )
+-            {   // compute end of file postition manually ...
++            {   // compute end of file position manually ...
+                 // seekp( 0, ios::end ), tellp( ) fails in 32 bit windows with files > 4 GiB
+                 size_t BlockHeaderSize =
+                     sizeof( unsigned int /*_blockSize*/ ) +
+diff --git a/src/osgPlugins/ply/vertexData.cpp b/src/osgPlugins/ply/vertexData.cpp
+index f2db29e..999c52d 100644
+--- a/src/osgPlugins/ply/vertexData.cpp
++++ b/src/osgPlugins/ply/vertexData.cpp
+@@ -535,7 +535,7 @@ osg::Node* VertexData::readPlyFile( const char* filename, const bool ignoreColor
+             osgUtil::SmoothingVisitor::smooth((*geom), osg::PI/2);
+         }
+ 
+-        // set flage true to activate the vertex buffer object of drawable
++        // set flags true to activate the vertex buffer object of drawable
+         geom->setUseVertexBufferObjects(true);
+ 
+         osg::ref_ptr<osg::Image> image;
+diff --git a/src/osgPlugins/rot/ReaderWriterROT.cpp b/src/osgPlugins/rot/ReaderWriterROT.cpp
+index 6d2ea6e..a6b012c 100644
+--- a/src/osgPlugins/rot/ReaderWriterROT.cpp
++++ b/src/osgPlugins/rot/ReaderWriterROT.cpp
+@@ -54,7 +54,7 @@ static bool getFilenameAndParams(const std::string& input, std::string& filename
+             return false;
+         }
+ 
+-        // clear the params sting of any brackets.
++        // clear the params string of any brackets.
+         std::string::size_type params_pos = params.size();
+         for(; params_pos>0; )
+         {
+diff --git a/src/osgPlugins/shadow/ReaderWriterOsgShadow.cpp b/src/osgPlugins/shadow/ReaderWriterOsgShadow.cpp
+index 767fe57..470ca08 100644
+--- a/src/osgPlugins/shadow/ReaderWriterOsgShadow.cpp
++++ b/src/osgPlugins/shadow/ReaderWriterOsgShadow.cpp
+@@ -49,7 +49,7 @@ static bool getFilenameAndParams(const std::string& input, std::string& filename
+             return false;
+         }
+ 
+-        // clear the params sting of any brackets.
++        // clear the params string of any brackets.
+         std::string::size_type params_pos = params.size();
+         for(; params_pos>0; )
+         {
+diff --git a/src/osgPlugins/trans/ReaderWriterTRANS.cpp b/src/osgPlugins/trans/ReaderWriterTRANS.cpp
+index 34e880b..705d8cb 100644
+--- a/src/osgPlugins/trans/ReaderWriterTRANS.cpp
++++ b/src/osgPlugins/trans/ReaderWriterTRANS.cpp
+@@ -55,7 +55,7 @@ static bool getFilenameAndParams(const std::string& input, std::string& filename
+         return false;
+     }
+ 
+-    // clear the params sting of any brackets.
++    // clear the params string of any brackets.
+     std::string::size_type params_pos = params.size();
+     for(; params_pos>0; )
+     {
+diff --git a/src/osgPlugins/txf/TXFFont.cpp b/src/osgPlugins/txf/TXFFont.cpp
+index 412a5a5..a201ecb 100644
+--- a/src/osgPlugins/txf/TXFFont.cpp
++++ b/src/osgPlugins/txf/TXFFont.cpp
+@@ -182,7 +182,7 @@ TXFFont::loadFont(std::istream& stream)
+         stream.read(reinterpret_cast<std::istream::char_type*>(image->data()), ntexels);
+         if (!stream)
+         {
+-            OSG_FATAL << "osgdb_txf: unxpected end of file in txf file \"" << _filename << "\"!" << std::endl;
++            OSG_FATAL << "osgdb_txf: unexpected end of file in txf file \"" << _filename << "\"!" << std::endl;
+             return false;
+         }
+     }
+@@ -194,7 +194,7 @@ TXFFont::loadFont(std::istream& stream)
+         if (!stream)
+         {
+             delete [] texbitmap;
+-            OSG_FATAL << "osgdb_txf: unxpected end of file in txf file \"" << _filename << "\"!" << std::endl;
++            OSG_FATAL << "osgdb_txf: unexpected end of file in txf file \"" << _filename << "\"!" << std::endl;
+             return false;
+         }
+ 
+@@ -217,7 +217,7 @@ TXFFont::loadFont(std::istream& stream)
+     }
+     else
+     {
+-        OSG_FATAL << "osgdb_txf: unxpected txf file!" << std::endl;
++        OSG_FATAL << "osgdb_txf: unexpected txf file!" << std::endl;
+         return false;
+     }
+ 
+diff --git a/src/osgPlugins/txp/TXPPagedLOD.cpp b/src/osgPlugins/txp/TXPPagedLOD.cpp
+index 9500db3..5e13735 100644
+--- a/src/osgPlugins/txp/TXPPagedLOD.cpp
++++ b/src/osgPlugins/txp/TXPPagedLOD.cpp
+@@ -103,7 +103,7 @@ void TXPPagedLOD::traverse(osg::NodeVisitor& nv)
+                     // modify the priority according to the child's priority offset and scale.
+                     priority = _perRangeDataList[numChildren]._priorityOffset + priority * _perRangeDataList[numChildren]._priorityScale;
+ 
+-                    //std::cout<<"    requesting child "<<_fileNameList[numChildren]<<" priotity = "<<priority<<std::endl;
++                    //std::cout<<"    requesting child "<<_fileNameList[numChildren]<<" priority = "<<priority<<std::endl;
+                     nv.getDatabaseRequestHandler()->requestNodeFile(_perRangeDataList[numChildren]._filename,
+                                                                     nv.getNodePath(),
+                                                                     priority,
+diff --git a/src/osgPlugins/txp/TileMapper.cpp b/src/osgPlugins/txp/TileMapper.cpp
+index 9d442f1..40af6b5 100644
+--- a/src/osgPlugins/txp/TileMapper.cpp
++++ b/src/osgPlugins/txp/TileMapper.cpp
+@@ -154,7 +154,7 @@ bool TileMapper::isTileNeighbourALowerLODLevel(const TileIdentifier& tid, int dx
+ {
+     if (_tileMap.count(TileIdentifier(tid.x+dx,tid.y+dy,tid.lod))!=0)
+     {
+-        // we have a neightbour at the same lod level.
++        // we have a neighbour at the same lod level.
+         return false;
+     }
+ 
+diff --git a/src/osgShadow/ConvexPolyhedron.cpp b/src/osgShadow/ConvexPolyhedron.cpp
+index 22e5090..2234cba 100644
+--- a/src/osgShadow/ConvexPolyhedron.cpp
++++ b/src/osgShadow/ConvexPolyhedron.cpp
+@@ -32,7 +32,7 @@ using namespace osgShadow;
+ 
+ #if defined( DEBUG ) || defined( _DEBUG ) || defined( _DEBUG_ )
+ // ConvexPolyhedron may produce tons of warnings when it becomes non convex.
+-// Unfortuantely this condition often happens in daily routine of shadow usage
++// Unfortunately this condition often happens in daily routine of shadow usage
+ // due precision errors mixed with repeating frustum cuts performed by MinimalShadowClasses.
+ // However, in most of above cases this condition is not fatal
+ // because polyhedron becomes concave by very small margin (measuring deep the hole).
+@@ -301,7 +301,7 @@ void ConvexPolyhedron::transform(const osg::Matrix& matrix, const osg::Matrix& i
+     }
+ 
+     // Perpective transforms and lack of precision
+-    // occasionaly cause removal of some points
++    // occasionally cause removal of some points
+ 
+     removeDuplicateVertices( );
+ 
+@@ -637,7 +637,7 @@ void ConvexPolyhedron::transformClip(const osg::Matrix& matrix, const osg::Matri
+     }
+ 
+     // Perpective transforms and lack of precision
+-    // occasionaly cause removal of some points
++    // occasionally cause removal of some points
+ 
+     removeDuplicateVertices( );
+ 
+diff --git a/src/osgShadow/LightSpacePerspectiveShadowMap.cpp b/src/osgShadow/LightSpacePerspectiveShadowMap.cpp
+index ebd499a..210d7d7 100644
+--- a/src/osgShadow/LightSpacePerspectiveShadowMap.cpp
++++ b/src/osgShadow/LightSpacePerspectiveShadowMap.cpp
+@@ -35,7 +35,7 @@
+ using namespace osgShadow;
+ 
+ ////////////////////////////////////////////////////////////////////////////////
+-// There are two slightly differing implemetations available on
++// There are two slightly differing implementations available on
+ // "Light Space Perspective Shadow Maps" page. One from 2004 and other from 2006.
+ // Our implementation is written in two versions based on these solutions.
+ ////////////////////////////////////////////////////////////////////////////////
+@@ -372,7 +372,7 @@ void LightSpacePerspectiveShadowMapAlgorithm::operator()
+     double n = (z_n+sqrt(z_f*z_n))/sinGamma;
+ 
+ #if ROBERTS_TEST_CHANGES
+-    // clamp the localtion of p so that it isn't too close to the eye as to cause problems
++    // clamp the location of p so that it isn't too close to the eye as to cause problems
+     float minRatio=0.02;
+     if (n<d*minRatio)
+     {
+diff --git a/src/osgShadow/ViewDependentShadowMap.cpp b/src/osgShadow/ViewDependentShadowMap.cpp
+index f72f2ce..a0b1bdb 100644
+--- a/src/osgShadow/ViewDependentShadowMap.cpp
++++ b/src/osgShadow/ViewDependentShadowMap.cpp
+@@ -1854,7 +1854,7 @@ struct RenderLeafBounds
+             else
+             {
+                 // no modelview matrix (such as when LightPointNode is in the scene graph) so assume
+-                // that modelview matrix is indentity.
++                // that modelview matrix is identity.
+                 light_mvp = light_p;
+             }
+             // OSG_INFO<<"Computing new light_mvp "<<light_mvp<<std::endl;
+diff --git a/src/osgSim/LightPointNode.cpp b/src/osgSim/LightPointNode.cpp
+index 89cb421..0425e1b 100644
+--- a/src/osgSim/LightPointNode.cpp
++++ b/src/osgSim/LightPointNode.cpp
+@@ -175,7 +175,7 @@ void LightPointNode::traverse(osg::NodeVisitor& nv)
+         {
+             if (typeid(*object)==typeid(LightPointDrawable))
+             {
+-                // resuse the user data attached to the render graph.
++                // reuse the user data attached to the render graph.
+                 drawable = static_cast<LightPointDrawable*>(object);
+ 
+             }
+@@ -260,7 +260,7 @@ void LightPointNode::traverse(osg::NodeVisitor& nv)
+ 
+             const osg::Vec3& position = lp._position;
+ 
+-            // skip light point if it is not contianed in the view frustum.
++            // skip light point if it is not contained in the view frustum.
+             if (computeClipping && !clipvol.contains(position)) continue;
+ 
+             // delta vector between eyepoint and light point.
+diff --git a/src/osgSim/SphereSegment.cpp b/src/osgSim/SphereSegment.cpp
+index 08423fc..2ac7e0b 100644
+--- a/src/osgSim/SphereSegment.cpp
++++ b/src/osgSim/SphereSegment.cpp
+@@ -2491,7 +2491,7 @@ void SphereSegment::updatePrimitives()
+     {
+         unsigned int rowSize = _density+1;
+ 
+-        // add primitve set
++        // add primitive set
+         osg::ref_ptr<osg::DrawElementsUShort> elements = new osg::DrawElementsUShort(GL_TRIANGLES);
+         elements->reserve(2*rowSize*rowSize);
+         _surfaceGeometry->getPrimitiveSetList().clear();
+@@ -2557,7 +2557,7 @@ void SphereSegment::updatePrimitives()
+     {
+         unsigned int rowSize = _density+1;
+ 
+-        // add primitve set
++        // add primitive set
+         osg::ref_ptr<osg::DrawElementsUShort> elements = new osg::DrawElementsUShort(GL_LINES);
+         elements->reserve(8);
+         _spokesGeometry->getPrimitiveSetList().clear();
+@@ -2581,7 +2581,7 @@ void SphereSegment::updatePrimitives()
+     {
+         unsigned int rowSize = _density+1;
+ 
+-        // add primitve set
++        // add primitive set
+         osg::ref_ptr<osg::DrawElementsUShort> elements = new osg::DrawElementsUShort(GL_LINE_STRIP);
+         elements->reserve((rowSize-1)*4+1);
+         _edgeLineGeometry->getPrimitiveSetList().clear();
+@@ -2618,7 +2618,7 @@ void SphereSegment::updatePrimitives()
+     {
+         unsigned int rowSize = _density+1;
+ 
+-        // add primitve set
++        // add primitive set
+         osg::ref_ptr<osg::DrawElementsUShort> elements = new osg::DrawElementsUShort(GL_TRIANGLE_FAN);
+         elements->reserve((rowSize-1)*4+2);
+         _sidesGeometry->getPrimitiveSetList().clear();
+diff --git a/src/osgUI/Widget.cpp b/src/osgUI/Widget.cpp
+index 1b9aafd..7831e48 100644
+--- a/src/osgUI/Widget.cpp
++++ b/src/osgUI/Widget.cpp
+@@ -441,7 +441,7 @@ bool Widget::computeIntersections(osgGA::EventVisitor* ev, osgGA::GUIEventAdapte
+         typedef std::vector<const osgUtil::LineSegmentIntersector::Intersection*> IntersectionPointerList;
+         IntersectionPointerList intersectionsToSort;
+ 
+-        // populate the temporay vector of poiners to the original intersection pointers.
++        // populate the temporary vector of pointers to the original intersection pointers.
+         for(osgUtil::LineSegmentIntersector::Intersections::iterator itr = source_intersections.begin();
+             itr != source_intersections.end();
+             ++itr)
+diff --git a/src/osgUtil/IncrementalCompileOperation.cpp b/src/osgUtil/IncrementalCompileOperation.cpp
+index e023367..d91a5dd 100644
+--- a/src/osgUtil/IncrementalCompileOperation.cpp
++++ b/src/osgUtil/IncrementalCompileOperation.cpp
+@@ -45,7 +45,7 @@ namespace osgUtil
+ //                        glGetTexParameteriv(GL_TEXTURE_2D, GL_TEXTURE_RESIDENT, &p);
+ //                    #endif
+ 
+-static osg::ApplicationUsageProxy ICO_e1(osg::ApplicationUsage::ENVIRONMENTAL_VARIABLE,"OSG_MINIMUM_COMPILE_TIME_PER_FRAME <float>","minimum compile time alloted to compiling OpenGL objects per frame in database pager.");
++static osg::ApplicationUsageProxy ICO_e1(osg::ApplicationUsage::ENVIRONMENTAL_VARIABLE,"OSG_MINIMUM_COMPILE_TIME_PER_FRAME <float>","minimum compile time allotted to compiling OpenGL objects per frame in database pager.");
+ static osg::ApplicationUsageProxy UCO_e2(osg::ApplicationUsage::ENVIRONMENTAL_VARIABLE,"OSG_MAXIMUM_OBJECTS_TO_COMPILE_PER_FRAME <int>","maximum number of OpenGL objects to compile per frame in database pager.");
+ static osg::ApplicationUsageProxy UCO_e3(osg::ApplicationUsage::ENVIRONMENTAL_VARIABLE,"OSG_FORCE_TEXTURE_DOWNLOAD <ON/OFF>","should the texture compiles be forced to download using a dummy Geometry.");
+ 
+diff --git a/src/osgUtil/RenderBin.cpp b/src/osgUtil/RenderBin.cpp
+index 540bfc5..7c3fc4e 100644
+--- a/src/osgUtil/RenderBin.cpp
++++ b/src/osgUtil/RenderBin.cpp
+@@ -305,7 +305,7 @@ void RenderBin::sortFrontToBack()
+ {
+     copyLeavesFromStateGraphListToRenderLeafList();
+ 
+-    // now sort the list into acending depth order.
++    // now sort the list into ascending depth order.
+     std::sort(_renderLeafList.begin(),_renderLeafList.end(),FrontToBackSortFunctor());
+ 
+ //    cout << "sort front to back"<<endl;
+@@ -323,7 +323,7 @@ void RenderBin::sortBackToFront()
+ {
+     copyLeavesFromStateGraphListToRenderLeafList();
+ 
+-    // now sort the list into acending depth order.
++    // now sort the list into ascending depth order.
+     std::sort(_renderLeafList.begin(),_renderLeafList.end(),BackToFrontSortFunctor());
+ 
+ //    cout << "sort back to front"<<endl;
+@@ -342,7 +342,7 @@ void RenderBin::sortTraversalOrder()
+ {
+     copyLeavesFromStateGraphListToRenderLeafList();
+ 
+-    // now sort the list into acending depth order.
++    // now sort the list into ascending depth order.
+     std::sort(_renderLeafList.begin(),_renderLeafList.end(),TraversalOrderFunctor());
+ }
+ 
+diff --git a/src/osgUtil/ShaderGen.cpp b/src/osgUtil/ShaderGen.cpp
+index 7960a30..9909779 100644
+--- a/src/osgUtil/ShaderGen.cpp
++++ b/src/osgUtil/ShaderGen.cpp
+@@ -63,7 +63,7 @@ void ShaderGenVisitor::remapStateSet(osg::StateSet* stateSet)
+ {
+     if (!stateSet) return;
+ 
+-    // remove any modes that won't be appropriate when using shaders, and remap them to the apppropriate Uniform/Define combination
++    // remove any modes that won't be appropriate when using shaders, and remap them to the appropriate Uniform/Define combination
+ 
+ 
+     osg::StateSet::ModeList& modes = stateSet->getModeList();
+diff --git a/src/osgUtil/Simplifier.cpp b/src/osgUtil/Simplifier.cpp
+index 7ab24b6..56d02fd 100644
+--- a/src/osgUtil/Simplifier.cpp
++++ b/src/osgUtil/Simplifier.cpp
+@@ -753,7 +753,7 @@ public:
+             EdgeSet::iterator itr = _edgeSet.find(edge);
+             if (itr!=_edgeSet.end())
+             {
+-                // remove the edge from the list, as its positoin in the list
++                // remove the edge from the list, as its position in the list
+                 // may need to change once its values have been amended
+                 _edgeSet.erase(itr);
+             }
+@@ -883,7 +883,7 @@ public:
+ 
+         //OSG_NOTICE<<"  pNew="<<pNew<<"\tedge_p1"<<edge_p1.get()<<"\tedge_p2"<<edge_p2.get()<<std::endl;
+ 
+-        // we copy the edge's _triangles and interate the copy of the triangle set to avoid invalidating iterators.
++        // we copy the edge's _triangles and iterate the copy of the triangle set to avoid invalidating iterators.
+         TriangleSet trianglesToRemove = edge->_triangles;
+         for(TriangleSet::iterator teitr=trianglesToRemove.begin();
+             teitr!=trianglesToRemove.end();
+diff --git a/src/osgViewer/View.cpp b/src/osgViewer/View.cpp
+index f493996..d0e8c5d 100644
+--- a/src/osgViewer/View.cpp
++++ b/src/osgViewer/View.cpp
+@@ -1459,7 +1459,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+     {
+         case(osg::DisplaySettings::QUAD_BUFFER):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             // left Camera left buffer
+@@ -1546,7 +1546,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+         }
+         case(osg::DisplaySettings::ANAGLYPHIC):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             // left Camera red
+@@ -1679,7 +1679,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+         }
+         case(osg::DisplaySettings::HORIZONTAL_SPLIT):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             bool left_eye_left_viewport = ds->getSplitStereoHorizontalEyeMapping()==osg::DisplaySettings::LEFT_EYE_LEFT_VIEWPORT;
+@@ -1771,7 +1771,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+         }
+         case(osg::DisplaySettings::VERTICAL_SPLIT):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             bool left_eye_bottom_viewport = ds->getSplitStereoVerticalEyeMapping()==osg::DisplaySettings::LEFT_EYE_BOTTOM_VIEWPORT;
+@@ -1783,7 +1783,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+                                0, left_start, traits->width, traits->height/2, traits->doubleBuffer ? GL_BACK : GL_FRONT,
+                                -1.0);
+ 
+-            // top vieport camera
++            // top viewport camera
+             osg::ref_ptr<osg::Camera> right_camera = assignStereoCamera(ds, gc.get(),
+                                0, right_start, traits->width, traits->height/2, traits->doubleBuffer ? GL_BACK : GL_FRONT,
+                                1.0);
+@@ -1870,7 +1870,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+         }
+         case(osg::DisplaySettings::LEFT_EYE):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             // single window, whole window, just left eye offsets
+@@ -1921,7 +1921,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+         }
+         case(osg::DisplaySettings::RIGHT_EYE):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             // single window, whole window, just right eye offsets
+@@ -1973,7 +1973,7 @@ void View::assignStereoOrKeystoneToCamera(osg::Camera* camera, osg::DisplaySetti
+         case(osg::DisplaySettings::VERTICAL_INTERLACE):
+         case(osg::DisplaySettings::CHECKERBOARD):
+         {
+-            // disconect the camera from the graphics context.
++            // disconnect the camera from the graphics context.
+             camera->setGraphicsContext(0);
+ 
+             // set up the stencil buffer
+diff --git a/src/osgViewer/Viewer.cpp b/src/osgViewer/Viewer.cpp
+index 9781094..99ae1d2 100644
+--- a/src/osgViewer/Viewer.cpp
++++ b/src/osgViewer/Viewer.cpp
+@@ -688,7 +688,7 @@ void Viewer::generateSlavePointerData(osg::Camera* camera, osgGA::GUIEventAdapte
+     if (!gw) return;
+ 
+     // What type of Camera is it?
+-    // 1) Master Camera : do nothin extra
++    // 1) Master Camera : do nothing extra
+     // 2) Slave Camera, Relative RF, Same scene graph as master : transform coords into Master Camera and add to PointerData list
+     // 3) Slave Camera, Relative RF, Different scene graph from master : do nothing extra?
+     // 4) Slave Camera, Absolute RF, Same scene graph as master : do nothing extra?
+diff --git a/src/osgVolume/FixedFunctionTechnique.cpp b/src/osgVolume/FixedFunctionTechnique.cpp
+index 19e9431..4a45381 100644
+--- a/src/osgVolume/FixedFunctionTechnique.cpp
++++ b/src/osgVolume/FixedFunctionTechnique.cpp
+@@ -106,7 +106,7 @@ void FixedFunctionTechnique::init()
+ 
+     if (_volumeTile->getLayer()==0)
+     {
+-        OSG_NOTICE<<"FixedFunctionTechnique::init(), error no layer assigend to volume tile."<<std::endl;
++        OSG_NOTICE<<"FixedFunctionTechnique::init(), error no layer assigned to volume tile."<<std::endl;
+         return;
+     }
+ 
+diff --git a/src/osgVolume/MultipassTechnique.cpp b/src/osgVolume/MultipassTechnique.cpp
+index 7677342..7075fe6 100644
+--- a/src/osgVolume/MultipassTechnique.cpp
++++ b/src/osgVolume/MultipassTechnique.cpp
+@@ -399,7 +399,7 @@ void MultipassTechnique::init()
+ 
+     if (_volumeTile->getLayer()==0)
+     {
+-        OSG_NOTICE<<"MultipassTechnique::init(), error no layer assigend to volume tile."<<std::endl;
++        OSG_NOTICE<<"MultipassTechnique::init(), error no layer assigned to volume tile."<<std::endl;
+         return;
+     }
+ 
+@@ -1066,15 +1066,15 @@ void MultipassTechnique::cull(osgUtil::CullVisitor* cv)
+             switch(renderingMode)
+             {
+                 case(CUBE):
+-                    // OSG_NOTICE<<"Travering Transform for CUBE rendering"<<std::endl;
++                    // OSG_NOTICE<<"Traversing Transform for CUBE rendering"<<std::endl;
+                     _transform->accept(*cv);
+                      break;
+                 case(HULL):
+-                    // OSG_NOTICE<<"Travering children for HULL rendering"<<std::endl;
++                    // OSG_NOTICE<<"Traversing children for HULL rendering"<<std::endl;
+                     getVolumeTile()->osg::Group::traverse(*cv);
+                     break;
+                 case(CUBE_AND_HULL):
+-                    // OSG_NOTICE<<"Travering Transform for CUBE_AND_HULL rendering"<<std::endl;
++                    // OSG_NOTICE<<"Traversing Transform for CUBE_AND_HULL rendering"<<std::endl;
+                     _transform->accept(*cv);
+                     //getVolumeTile()->osg::Group::traverse(*cv);
+                     break;
+diff --git a/src/osgVolume/RayTracedTechnique.cpp b/src/osgVolume/RayTracedTechnique.cpp
+index ce72b07..ef0f71d 100644
+--- a/src/osgVolume/RayTracedTechnique.cpp
++++ b/src/osgVolume/RayTracedTechnique.cpp
+@@ -63,7 +63,7 @@ void RayTracedTechnique::init()
+ 
+     if (_volumeTile->getLayer()==0)
+     {
+-        OSG_NOTICE<<"RayTracedTechnique::init(), error no layer assigend to volume tile."<<std::endl;
++        OSG_NOTICE<<"RayTracedTechnique::init(), error no layer assigned to volume tile."<<std::endl;
+         return;
+     }
+ 
+diff --git a/src/osgWrappers/serializers/osgGA/KeySwitchMatrixManipulator.cpp b/src/osgWrappers/serializers/osgGA/KeySwitchMatrixManipulator.cpp
+index b86ad49..4746e7c 100644
+--- a/src/osgWrappers/serializers/osgGA/KeySwitchMatrixManipulator.cpp
++++ b/src/osgWrappers/serializers/osgGA/KeySwitchMatrixManipulator.cpp
+@@ -35,7 +35,7 @@ static bool writeKeyManipMap( osgDB::OutputStream& os, const osgGA::KeySwitchMat
+     const osgGA::KeySwitchMatrixManipulator::KeyManipMap& kmm = kwmm.getKeyManipMap();    
+     unsigned int size = kmm.size();
+ 
+-    // find out what num the acive camera manipulator is
++    // find out what num the active camera manipulator is
+     const osgGA::CameraManipulator* cm = kwmm.getCurrentMatrixManipulator();
+     int index = 0;
+     int activeCameraManipulatorIndex = -1;

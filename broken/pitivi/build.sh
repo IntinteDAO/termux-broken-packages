@@ -1,0 +1,9 @@
+TERMUX_PKG_HOMEPAGE="https://www.pitivi.org"
+TERMUX_PKG_DESCRIPTION="OpenShot Video Editor is a free, open-source, non-linear video editor. It can create and edit videos and movies using many popular video, audio, and image formats. Create videos for YouTube, Flickr, Vimeo, Metacafe, iPod, Xbox, and many more common formats!"
+TERMUX_PKG_LICENSE="GPL-3.0"
+TERMUX_PKG_MAINTAINER="fervi"
+TERMUX_PKG_VERSION=2022.06
+TERMUX_PKG_SRCURL=http://deb.debian.org/debian/pool/main/p/pitivi/pitivi_${TERMUX_PKG_VERSION}.orig.tar.xz
+TERMUX_PKG_SHA256=533d38e3c6d211c2bd0e95e2b96b0f0833bdf0d5d477ace07df611583506c838
+TERMUX_PKG_DEPENDS="pycairo, libxml2-python, appstream-glib, python, libxml2, gst-python, pygobject"
+TERMUX_PKG_SETUP_PYTHON=true

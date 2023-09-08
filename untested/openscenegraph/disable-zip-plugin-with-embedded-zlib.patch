@@ -1,0 +1,26 @@
+From: =?utf-8?q?Alberto_Luaces_Fern=C3=A1ndez?= <aluaces@udc.es>
+Date: Thu, 3 Oct 2019 13:41:17 +0200
+Subject: No description.
+
+===================================================================
+---
+ src/osgPlugins/CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/osgPlugins/CMakeLists.txt b/src/osgPlugins/CMakeLists.txt
+index 8125504..eeb9d2a 100644
+--- a/src/osgPlugins/CMakeLists.txt
++++ b/src/osgPlugins/CMakeLists.txt
+@@ -250,9 +250,9 @@ IF(FREETYPE_FOUND)
+     ADD_PLUGIN_DIRECTORY(freetype)
+ ENDIF()
+ 
+-IF(ZLIB_FOUND)
+-    ADD_PLUGIN_DIRECTORY(zip)
+-ENDIF()
++# IF(ZLIB_FOUND)
++#     ADD_PLUGIN_DIRECTORY(zip)
++# ENDIF()
+ 
+ IF(RSVG_FOUND)
+     ADD_PLUGIN_DIRECTORY(svg)

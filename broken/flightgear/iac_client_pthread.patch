@@ -1,0 +1,42 @@
+diff -ur fg/3rdparty/iaxclient/lib/unixfuncs.c flightgear/3rdparty/iaxclient/lib/unixfuncs.c
+--- fg/3rdparty/iaxclient/lib/unixfuncs.c	2023-08-05 22:45:31.154644095 +0200
++++ flightgear/3rdparty/iaxclient/lib/unixfuncs.c	2023-08-05 22:49:29.042577234 +0200
+@@ -291,7 +291,11 @@
+ cleanup:
+ 	b->CanaryRun = 0;
+ 	DBUG("WatchDogProc: cancel Canary\n");
+-	pthread_cancel( b->CanaryThread );
++	#ifndef __ANDROID__
++		pthread_cancel( b->CanaryThread );
++	#else
++            pthread_kill(b->CanaryThread, SIGUSR2);
++	#endif
+ 	DBUG("WatchDogProc: join Canary\n");
+ 	pthread_join( b->CanaryThread, NULL );
+ 	DBUG("WatchDogProc: forget Canary\n");
+@@ -310,7 +314,11 @@
+ 	{
+ 		b->WatchDogRun = 0;
+ 		DBUG("StopWatchDog: cancel WatchDog\n");
+-		pthread_cancel( b->WatchDogThread );
++		#ifndef __ANDROID__
++			pthread_cancel(b->WatchDogThread);
++		#else
++			pthread_kill(b->WatchDogThread, SIGUSR2);
++		#endif
+ 		pthread_join( b->WatchDogThread, NULL );
+ 		b->IsWatchDogThreadValid = 0;
+ 	}
+@@ -319,7 +327,11 @@
+ 	{
+ 		b->CanaryRun = 0;
+ 		DBUG("StopWatchDog: cancel Canary\n");
+-		pthread_cancel( b->CanaryThread );
++		#ifndef __ANDROID__
++			pthread_cancel(b->CanaryThread);
++		#else
++			pthread_kill(b->CanaryThread, SIGUSR2);
++		#endif
+ 		DBUG("StopWatchDog: join Canary\n");
+ 		pthread_join( b->CanaryThread, NULL );
+ 		b->IsCanaryThreadValid = 0;

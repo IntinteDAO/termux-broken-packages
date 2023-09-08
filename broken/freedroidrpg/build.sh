@@ -1,0 +1,10 @@
+TERMUX_PKG_HOMEPAGE=https://www.freedroid.org
+TERMUX_PKG_DESCRIPTION="Freedroid RPG is an RPG with isometric graphics. In it, the player is Tux, who must fight rebelling robots in order to restore peace to humankind. To do so, Tux may take over robots in a minigame based off the classic game Paradroid, or may simply blast them to pieces with a weapon."
+TERMUX_PKG_LICENSE="GPL-2.0"
+TERMUX_PKG_MAINTAINER="@fervi"
+TERMUX_PKG_VERSION="1.0"
+#TERMUX_PKG_SRCURL="https://ftp.osuosl.org/pub/freedroid/freedroidRPG-${TERMUX_PKG_VERSION}/freedroidRPG-${TERMUX_PKG_VERSION}.tar.gz"
+TERMUX_PKG_SRCURL="https://src.fedoraproject.org/repo/pkgs/freedroidrpg/freedroidRPG-1.0.tar.gz/sha512/e3cac480e9db02b2991da674ec6357b1d660996f3fa3eeb75f0908ca653a637eeb44239c1cd7540087f27195e460100d08aa022f6812db72387647218c7bcb29/freedroidRPG-1.0.tar.gz"
+TERMUX_PKG_SHA256=7995b70b594248ea14d1b4ef595397a60183031c99163b01c1a8a70ccef3bbcf
+#TERMUX_PKG_DEPENDS="sdl, sdl-image, sdl2-image, sdl2"
+TERMUX_PKG_DEPENDS="sdl2-image, sdl2"

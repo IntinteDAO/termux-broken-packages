@@ -1,0 +1,34 @@
+diff -ur speed-dreams/src/libs/tgf/linuxspec.cpp speed-dreams-src-base-2.3.0-r8786/src/libs/tgf/linuxspec.cpp
+--- src/libs/tgf/linuxspec.cpp	2023-03-11 22:45:48.000000000 +0100
++++ src/libs/tgf/linuxspec.cpp	2023-08-03 15:32:28.548524440 +0200
+@@ -35,6 +35,7 @@
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <sys/utsname.h> // uname
++#include <cassert>
+ 
+ #if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <sys/param.h>
+@@ -50,6 +51,22 @@
+ #include <pthread.h>
+ #endif
+ 
++#if defined(__BIONIC__)
++static inline int pthread_setaffinity_np(pthread_t thread, size_t cpusetsize,
++                                         cpu_set_t *cpuset) {
++  assert(pthread_equal(pthread_self(), thread));
++  return sched_setaffinity(0, cpusetsize, cpuset);
++}
++
++static inline int pthread_getaffinity_np(pthread_t thread, size_t cpusetsize,
++                                         cpu_set_t *cpuset) {
++  assert(pthread_equal(pthread_self(), thread));
++  return sched_getaffinity(0, cpusetsize, cpuset);
++}
++#endif
++
++
++
+ #include "tgf.h"
+ 
+ #include "os.h"

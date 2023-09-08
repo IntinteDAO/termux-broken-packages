@@ -1,0 +1,17 @@
+--- libgadu-1.12.2.orig/src/events.c
++++ libgadu-1.12.2/src/events.c
+@@ -1317,12 +1317,11 @@ static gg_action_t gg_handle_tls_negotia
+ 	}
+ 
+ 	gg_debug_session(sess, GG_DEBUG_MISC, "// gg_watch_fd() TLS negotiation succeeded:\n");
+-	gg_debug_session(sess, GG_DEBUG_MISC, "//   cipher: VERS-%s:%s:%s:%s:COMP-%s\n",
++	gg_debug_session(sess, GG_DEBUG_MISC, "//   cipher: VERS-%s:%s:%s:%s\n",
+ 		gnutls_protocol_get_name(gnutls_protocol_get_version(GG_SESSION_GNUTLS(sess))),
+ 		gnutls_cipher_get_name(gnutls_cipher_get(GG_SESSION_GNUTLS(sess))),
+ 		gnutls_kx_get_name(gnutls_kx_get(GG_SESSION_GNUTLS(sess))),
+-		gnutls_mac_get_name(gnutls_mac_get(GG_SESSION_GNUTLS(sess))),
+-		gnutls_compression_get_name(gnutls_compression_get(GG_SESSION_GNUTLS(sess))));
++		gnutls_mac_get_name(gnutls_mac_get(GG_SESSION_GNUTLS(sess))));
+ 
+ 	if (gnutls_certificate_type_get(GG_SESSION_GNUTLS(sess)) == GNUTLS_CRT_X509) {
+ 		unsigned int peer_count;

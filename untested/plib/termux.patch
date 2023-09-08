@@ -1,0 +1,53 @@
+diff -ur plib_orig/src/ssg/ssgLoadFLT.cxx plib/src/ssg/ssgLoadFLT.cxx
+--- plib_orig/src/ssg/ssgLoadFLT.cxx	2008-03-11 03:06:23.000000000 +0100
++++ plib/src/ssg/ssgLoadFLT.cxx	2023-03-10 10:58:20.783202296 +0100
+@@ -143,7 +143,7 @@
+ typedef unsigned char ubyte;
+ 
+ #ifdef UL_WIN32
+-typedef unsigned short ushort;
++typedef unsigned short u_short;
+ typedef unsigned int uint;
+ #endif
+ 
+@@ -170,10 +170,10 @@
+ #if !defined(BYTE_ORDER)
+ static void _swab16(const void *src, void *dst, int n)
+ {
+-   ushort *s = (ushort *)src;
+-   ushort *d = (ushort *)dst;
++   u_short *s = (u_short *)src;
++   u_short *d = (u_short *)dst;
+    while (n--) {
+-      ushort t = *s++;
++      u_short t = *s++;
+       *d++ = (((t & 0xff00U) >> 8) |
+ 	      ((t & 0x00ffU) << 8));
+    }
+@@ -240,7 +240,7 @@
+ 
+ inline uint get16u(const void *ptr)
+ {
+-   return *(ushort *)ptr;
++   return *(u_short *)ptr;
+ }
+ 
+ inline uint get32u(const void *ptr)
+@@ -258,7 +258,7 @@
+ 
+ inline uint get16u(const void *ptr)
+ {
+-   ushort tmp = *(ushort *)ptr;
++   u_short tmp = *(u_short *)ptr;
+    return (((tmp & 0xff00U) >> 8) |
+ 	   ((tmp & 0x00ffU) << 8));
+ }
+@@ -512,7 +512,7 @@
+ 
+ #if 0
+    short priority; /* affects the ordering within the geoset */
+-   ushort transparency; /* eventually applied to colors when done */
++   u_short transparency; /* eventually applied to colors when done */
+ #endif
+    
+    int index[3];
